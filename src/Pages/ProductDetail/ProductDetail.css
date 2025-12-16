@@ -83,6 +83,7 @@
 }
 
 .pd__imageWrap {
+  position: relative;
   border-radius: 18px;
   overflow: hidden;
   background: #f2f2f2;
@@ -93,7 +94,12 @@
   height: 420px;
   object-fit: cover;
   display: block;
-  transition: opacity 200ms ease;
+  opacity: 1;
+  transition: opacity 160ms ease;
+}
+
+.pd__image.is-fading {
+  opacity: 0;
 }
 
 .pd__imageFallback {
@@ -101,39 +107,141 @@
   background: linear-gradient(135deg, #eee, #fff);
 }
 
+/* INDICADORES DE IMAGEN*/
+.pd__indicators {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(8px);
+}
+
+/* dot base */
+.pd__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.6);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition:
+    width 220ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 200ms ease,
+    opacity 200ms ease;
+  opacity: 0.8;
+}
+
+/* hover */
+.pd__dot:hover {
+  opacity: 1;
+}
+
+/* activo → pill */
+.pd__dot.is-active {
+  width: 32px;
+  background: #fff;
+  opacity: 1;
+}
+
+/* FLECHAS DE IMAGENES*/
+
+.pd__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 6;
+
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: none;
+
+  background: rgba(0, 0, 0, 0.35);
+  color: white;
+  font-size: 26px;
+  line-height: 1;
+
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 160ms ease, transform 160ms ease, background 160ms ease;
+}
+
+/* posiciones */
+.pd__arrow--left {
+  left: 14px;
+}
+
+.pd__arrow--right {
+  right: 14px;
+}
+
+/* hover sobre la imagen → aparecen */
+.pd__imageWrap:hover .pd__arrow {
+  opacity: 1;
+}
+
+/* hover individual */
+.pd__arrow:hover {
+  background: rgba(0, 0, 0, 0.55);
+  transform: translateY(-50%) scale(1.05);
+}
+
+/* IMAGENES MINIATURA*/
 .pd__thumbs {
   display: flex;
   gap: 10px;
 }
 
 .pd__thumb {
-  border: none;
+  border: 0;
   padding: 0;
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
   cursor: pointer;
-  opacity: 0.7;
-  transition: opacity 150ms ease, transform 150ms ease;
+  opacity: 0.6;
+  transform: translateY(0) scale(1);
+  transition: opacity 140ms ease, transform 140ms ease, box-shadow 140ms ease;
+  background: transparent;
 }
 
 .pd__thumb img {
-  width: 70px;
-  height: 60px;
+  width: 72px;
+  height: 62px;
   object-fit: cover;
   display: block;
+  filter: saturate(0.95);
 }
 
 .pd__thumb:hover {
-  opacity: 1;
-  transform: translateY(-2px);
+  opacity: 0.95;
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.18);
 }
 
 .pd__thumb.is-active {
   opacity: 1;
+  transform: translateY(-1px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.22);
   outline: 2px solid #111;
+  outline-offset: 2px;
 }
 
 @media (max-width: 900px) {
   .pd__layout { grid-template-columns: 1fr; }
   .pd__img, .pd__imgFallback { height: 320px; }
+}
+
+@media (max-width: 768px) {
+  .pd__arrow {
+    display: none;
+  }
 }

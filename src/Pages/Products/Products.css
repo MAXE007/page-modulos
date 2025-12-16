@@ -1,17 +1,44 @@
 .tipos {
-  max-width: 1100px;
+  min-height: 100vh;
+  background-image: url("/images/pinos.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.tipos > * {
+  position: relative;
+  z-index: 1;
+}
+
+.tipos:before{
+  content: "";
+  position: fixed; /* para que cubra toda la pantalla aunque scrollees */
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35); /* ajustá 0.25–0.45 */
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* cards de productos con tamaño adecuado */
+.tipos__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;   /* ajustá: 1100–1200 */
   margin: 0 auto;
   padding: 28px 16px 50px;
 }
 
 .tipos__head h1 {
+  color: aliceblue;
   margin: 0 0 6px;
   font-size: 34px;
 }
 
 .tipos__head p {
   margin: 0 0 18px;
-  color: #555;
+  color: #c7c7c7;
   line-height: 1.6;
 }
 

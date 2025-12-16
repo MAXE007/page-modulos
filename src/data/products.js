@@ -9,9 +9,9 @@ export const PRODUCTS = [
     delivery: "Entrega inmediata",
     images: [
       "/images/mod-19.jpg",
-      "/images/mod-19.jpg",
+      "/images/mod-36.jpg",
       "/images/mod-28.jpg",
-      "/images/mod-28.jpg"
+      "/images/mod-48.jpg"
     ],
     specs: [
       "Estructura metálica reforzada",

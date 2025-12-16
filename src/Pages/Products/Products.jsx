@@ -5,16 +5,18 @@ import "./Products.css";
 export default function Products() {
   return (
     <main className="tipos">
-      <header className="tipos__head">
-        <h1>Tipologías</h1>
-        <p>Seleccioná un módulo para ver especificaciones y pedir cotización.</p>
-      </header>
+      <div className="tipos__inner">
+        <header className="tipos__head">
+          <h1>Tipologías</h1>
+          <p>Seleccioná un módulo para ver especificaciones y pedir cotización.</p>
+        </header>
 
-      <section className="tipos__grid">
-        {PRODUCTS.map((p) => (
-          <ProductCard3D key={p.id} product={p} />
-        ))}
-      </section>
+        <section className="tipos__grid">
+          {PRODUCTS.map((p) => (
+            <ProductCard3D key={p.id} product={p} />
+          ))}
+        </section>
+      </div>
     </main>
   );
 }
