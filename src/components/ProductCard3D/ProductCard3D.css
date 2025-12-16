@@ -1,0 +1,79 @@
+.pc {
+  border: 1px solid #eaeaea;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #0b0b0b;
+  color: #fff;
+  padding: 16px;
+  transform-style: preserve-3d;
+}
+
+.pc__title {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.pc__subtitle {
+  margin: 0 0 12px 0;
+  color: rgba(255,255,255,0.70);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.pc__media {
+  border-radius: 14px;
+  overflow: hidden;
+  height: 240px;
+  background: #151515;
+}
+
+/* Parallax suave de imagen (como en el video) */
+.pc__img, .pc__imgFallback {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: translate3d(calc(var(--mx) * 10px), calc(var(--my) * 8px), 0px) scale(1.06);
+  transition: transform 120ms ease;
+}
+
+.pc__imgFallback {
+  background: linear-gradient(135deg, #1a1a1a, #0f0f0f);
+}
+
+.pc__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+  color: rgba(255,255,255,0.75);
+  font-size: 12px;
+}
+
+.pc__badge {
+  border: 1px solid rgba(255,255,255,0.35);
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+.pc__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.pc__wa {
+  color: #25d366;
+  font-weight: 800;
+}
+
+.pc__more {
+  background: #fff;
+  color: #111;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 900;
+}

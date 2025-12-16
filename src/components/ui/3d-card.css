@@ -1,0 +1,23 @@
+.card3d-container {
+  perspective: 900px;
+}
+
+.card3d-body {
+  --rx: 0deg;
+  --ry: 0deg;
+  --mx: 0;
+  --my: 0;
+
+  transform: rotateX(var(--rx)) rotateY(var(--ry));
+  transform-style: preserve-3d;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.card3d-body:hover {
+  box-shadow: 0 22px 60px rgba(0,0,0,0.18);
+}
+
+.card3d-item {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
