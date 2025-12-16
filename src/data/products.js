@@ -7,7 +7,12 @@ export const PRODUCTS = [
     rooms: 1,
     bathroom: true,
     delivery: "Entrega inmediata",
-    images: ["/images/mod-19.jpg"],
+    images: [
+      "/images/mod-19.jpg",
+      "/images/mod-19.jpg",
+      "/images/mod-28.jpg",
+      "/images/mod-28.jpg"
+    ],
     specs: [
       "Estructura metálica reforzada",
       "Aislación térmica y acústica",
@@ -23,7 +28,12 @@ export const PRODUCTS = [
     rooms: 2,
     bathroom: true,
     delivery: "Entrega inmediata",
-    images: ["/images/mod-28.jpg"],
+    images: [
+      "/images/mod-28.jpg",
+      "/images/mod-28.jpg",
+      "/images/mod-28.jpg",
+      "/images/mod-19.jpg"
+    ],
     specs: [
       "Cocina integrada",
       "Baño completo",
@@ -39,7 +49,12 @@ export const PRODUCTS = [
     rooms: 3,
     bathroom: true,
     delivery: "A pedido (30–45 días)",
-    images: ["/images/mod-36.jpg"],
+    images: [
+      "/images/mod-36.jpg",
+      "/images/mod-36.jpg",
+      "/images/mod-36.jpg",
+      "/images/mod-28.jpg"
+    ],
     specs: [
       "Distribución funcional",
       "Mayor superficie útil",
@@ -55,7 +70,12 @@ export const PRODUCTS = [
     rooms: 4,
     bathroom: true,
     delivery: "A pedido (45–60 días)",
-    images: ["/images/mod-48.jpg"],
+    images: [
+      "/images/mod-48.jpg",
+      "/images/mod-48.jpg",
+      "/images/mod-48.jpg",
+      "/images/mod-28.jpg"
+    ],
     specs: [
       "Espacios amplios",
       "Opciones 1 o 2 dormitorios",

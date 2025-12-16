@@ -1,10 +1,15 @@
 import { Link, useParams } from "react-router-dom";
+import { useState } from "react";
 import { PRODUCTS } from "../../data/products";
 import "./ProductDetail.css";
 
 export default function ProductDetail() {
   const { id } = useParams();
   const product = PRODUCTS.find((p) => p.id === id);
+
+  const [activeImage, setActiveImage] = useState(
+    product?.images?.[0]
+  );
 
   if (!product) {
     return (
@@ -15,17 +20,42 @@ export default function ProductDetail() {
     );
   }
 
-  const cover = product.images?.[0];
 
   return (
     <main className="pd">
       <Link className="pd__back" to="/tipologias">← Volver</Link>
 
       <div className="pd__layout">
-        <section className="pd__media">
-          {cover ? <img className="pd__img" src={cover} alt={product.name} /> : <div className="pd__imgFallback" />}
+        {/* GALERÍA */}
+        <section className="pd__gallery">
+          <div className="pd__imageWrap">
+            {activeImage ? (
+              <img
+                src={activeImage}
+                alt={product.name}
+                className="pd__image"
+              />
+            ) : (
+              <div className="pd__imageFallback" />
+            )}
+          </div>
+
+          <div className="pd__thumbs">
+            {product.images.map((img) => (
+              <button
+                key={img}
+                className={`pd__thumb ${
+                  img === activeImage ? "is-active" : ""
+                }`}
+                onClick={() => setActiveImage(img)}
+              >
+                <img src={img} alt="miniatura" />
+              </button>
+            ))}
+          </div>
         </section>
 
+        {/* INFO */}
         <section className="pd__info">
           <h1 className="pd__title">{product.name}</h1>
           <p className="pd__subtitle">{product.subtitle}</p>
@@ -39,19 +69,21 @@ export default function ProductDetail() {
 
           <h3>Características</h3>
           <ul className="pd__list">
-            {product.specs.map((s) => <li key={s}>{s}</li>)}
+            {product.specs.map((s) => (
+              <li key={s}>{s}</li>
+            ))}
           </ul>
 
           <div className="pd__ctaRow">
             <a
               className="pd__cta"
               href={`https://wa.me/5492610000000?text=${encodeURIComponent(
-                `Hola! Quiero cotizar: ${product.name}`
+                `Hola! Quiero cotizar el ${product.name}`
               )}`}
               target="_blank"
               rel="noreferrer"
             >
-              Cotizar por WhatsApp
+              Consultar por WhatsApp
             </a>
 
             <Link className="pd__secondary" to="/contacto">
