@@ -1,31 +1,23 @@
+import { Link } from "react-router-dom";
+import RevealText from "../../components/RevealText/RevealText";
 import "./Hero.css";
 
 export default function Hero() {
   return (
-    <section id="top" className="hero">
-      <div className="hero__inner">
-        <div className="hero__copy">
-          <h1>Módulos habitacionales modernos, listos para instalar.</h1>
-          <p>
-            Diseños minimalistas, fabricación rápida y opciones personalizables.
-            Pedí catálogo y cotización por WhatsApp.
-          </p>
+    <section className="hero">
+      <div className="hero__bg" aria-hidden="true" />
+      <div className="hero__overlay" aria-hidden="true" />
 
-          <div className="hero__actions">
-            <a className="btn btn--primary" href="#products">Ver modelos</a>
-            <a className="btn" href="#contact">Cotizar</a>
-          </div>
+      <div className="hero__content hero__content--center">
+        <RevealText
+          text="Bienvenidos a"
+          words={["FAST", "FAST MODULAR"]}
+        />
 
-          <div className="hero__meta">
-            <span>Entrega rápida</span>
-            <span>Financiación</span>
-            <span>Personalización</span>
-          </div>
-        </div>
+        <p className="hero__subtitle hero__subtitle--reveal">
+          Brindamos soluciones arquitectónicas en forma de módulos transportables
+        </p>
 
-        <div className="hero__media" aria-label="Imagen de módulo">
-          <div className="hero__mock" />
-        </div>
       </div>
     </section>
   );

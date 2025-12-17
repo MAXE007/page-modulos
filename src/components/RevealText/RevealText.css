@@ -1,0 +1,78 @@
+.ltf {
+  margin: 0;
+  font-size: clamp(35px, 5vw, 60px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.ltf__static {
+  white-space: nowrap;
+}
+
+/* CASILLERO */
+.ltf__slot {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+  height: 1.2em;
+  padding: 14px 24px;
+
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(16px);
+
+  /* 🔑 transición suave del ancho */
+  transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* PALABRA animada */
+.ltf__word {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 120%);
+  white-space: nowrap;
+
+  animation: ltfUp 1.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* palabra invisible para medir */
+.ltf__measure {
+  position: absolute;
+  visibility: hidden;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+@keyframes ltfUp {
+   0% {
+    transform: translate(-50%, 100%);
+    opacity: 0;
+    filter: blur(8px);
+  }
+
+  60% {
+    opacity: 1;
+    filter: blur(1px);
+  }
+
+  100% {
+    transform: translate(-50%, 0);
+    opacity: 1;
+    filter: blur(0);
+  }
+}
