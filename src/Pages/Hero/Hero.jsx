@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import RevealText from "../../components/RevealText/RevealText";
+import TypeSubtitle from "../../components/TypeSubtitle/TypeSubtitle";
 import "./Hero.css";
 
 export default function Hero() {
@@ -15,7 +16,11 @@ export default function Hero() {
         />
 
         <p className="hero__subtitle hero__subtitle--reveal">
-          Brindamos soluciones arquitectónicas en forma de módulos transportables
+          <TypeSubtitle
+            text="Brindamos soluciones arquitectónicas en forma de módulos transportables"
+            speed={24}
+            delay={1100}
+          />
         </p>
 
       </div>

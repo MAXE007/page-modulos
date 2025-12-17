@@ -4,7 +4,7 @@ import "./RevealText.css";
 export default function RevealText({
   text = "Bienvenidos a",
   words = ["FAST", "FAST MODULAR"],
-  interval = 2200,
+  interval = 4200,
 }) {
   const [index, setIndex] = useState(0);
   const slotRef = useRef(null);
