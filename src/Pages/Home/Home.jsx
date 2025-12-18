@@ -1,5 +1,6 @@
 import Hero from "../Hero/Hero";
 import "./Home.css";
+import Timeline from "../../components/Timeline/Timeline";
 
 export default function Home() {
   return (
@@ -9,11 +10,52 @@ export default function Home() {
       {/* contenido para que el scroll tenga destino */}
       <section className="home__below" id="contenido">
         <div className="home__inner">
-          <h2>Modulares pensados para vivir y trabajar</h2>
-          <p>
-            Tipologías disponibles, diseño funcional y entrega rápida. Elegí tu
-            módulo y consultá por disponibilidad.
-          </p>
+          <Timeline
+            title="Nuestro proceso"
+            items={[
+              {
+                id: "a1",
+                kicker: "Inicio",
+                leftTitle: "2023",
+                text: "Definimos el objetivo del módulo y el tipo de uso. Te guiamos con tipologías y tiempos.",
+                media: [
+                  { src: "public/images/mod-36.jpg", label: "Módulos compactos para oficina / monoambiente" },
+                  { src: "public/images/mod-48.jpg", label: "Vivienda compacta con expansión" },
+                ],
+              },
+              {
+                id: "a2",
+                kicker: "Definición",
+                leftTitle: "2024",
+                text: "Ajustamos distribución, terminaciones y logística. Todo queda documentado antes de avanzar.",
+                media: [
+                  { src: "public/images/mod-19.jpg", label: "Interior: terminaciones modernas" },
+                  { src: "public/images/mod-28.jpg", label: "Aberturas y luz natural" },
+                ],
+              },
+              {
+                id: "a1",
+                kicker: "Inicio",
+                leftTitle: "Principios de 2025",
+                text: "Definimos el objetivo del módulo y el tipo de uso. Te guiamos con tipologías y tiempos.",
+                media: [
+                  { src: "public/images/mod-36.jpg", label: "Módulos compactos para oficina / monoambiente" },
+                  { src: "public/images/mod-48.jpg", label: "Vivienda compacta con expansión" },
+                ],
+              },
+              {
+                id: "a1",
+                kicker: "Inicio",
+                leftTitle: "2025",
+                text: "Definimos el objetivo del módulo y el tipo de uso. Te guiamos con tipologías y tiempos.",
+                media: [
+                  { src: "public/images/mod-36.jpg", label: "Módulos compactos para oficina / monoambiente" },
+                  { src: "public/images/mod-48.jpg", label: "Vivienda compacta con expansión" },
+                ],
+              },
+            ]}
+          />
+
         </div>
       </section>
     </main>
