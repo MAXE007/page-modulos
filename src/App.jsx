@@ -9,6 +9,8 @@ import ProductDetail from "./Pages/ProductDetail/ProductDetail";
 
 import FAQ from "./Pages/FAQ/FAQ";
 import Contact from "./Pages/Contact/Contact";
+import FloatingSocialButtons from "./components/FloatingSocialButtons/FloatingSocialButtons";
+
 
 export default function App() {
   return (
@@ -24,6 +26,7 @@ export default function App() {
       </Routes>
 
       <Footer />
+      <FloatingSocialButtons />
     </>
   );
 }

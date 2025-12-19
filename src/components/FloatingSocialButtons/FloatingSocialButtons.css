@@ -1,0 +1,66 @@
+.fsb {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 9999;
+}
+
+.fsb__btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+  transform: translateZ(0);
+  transition: transform 160ms ease, box-shadow 160ms ease, filter 160ms ease;
+  text-decoration: none;
+}
+
+.fsb__btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.28);
+  filter: brightness(1.03);
+}
+
+.fsb__btn:active {
+  transform: translateY(0px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+}
+
+.fsb__icon {
+  width: 28px;
+  height: 28px;
+  fill: #ffffff;
+}
+
+.fsb__btn--wa {
+  background: #25d366;
+}
+
+.fsb__btn--ig {
+  background: radial-gradient(
+    circle at 30% 30%,
+    #feda75 0%,
+    #fa7e1e 25%,
+    #d62976 55%,
+    #962fbf 75%,
+    #4f5bd5 100%
+  );
+}
+
+@media (max-width: 480px) {
+  .fsb {
+    right: 14px;
+    bottom: 14px;
+    gap: 10px;
+  }
+  .fsb__btn {
+    width: 52px;
+    height: 52px;
+  }
+}
