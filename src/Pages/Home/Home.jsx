@@ -19,8 +19,8 @@ export default function Home() {
                 leftTitle: "2023",
                 text: "Definimos el objetivo del módulo y el tipo de uso. Te guiamos con tipologías y tiempos.",
                 media: [
-                  { src: "public/images/mod-36.jpg", label: "Módulos compactos para oficina / monoambiente" },
-                  { src: "public/images/mod-48.jpg", label: "Vivienda compacta con expansión" },
+                  { src: "/images/mod-36.jpg", label: "Módulos compactos para oficina / monoambiente" },
+                  { src: "/images/mod-48.jpg", label: "Vivienda compacta con expansión" },
                 ],
               },
               {
@@ -29,8 +29,8 @@ export default function Home() {
                 leftTitle: "2024",
                 text: "Ajustamos distribución, terminaciones y logística. Todo queda documentado antes de avanzar.",
                 media: [
-                  { src: "public/images/mod-19.jpg", label: "Interior: terminaciones modernas" },
-                  { src: "public/images/mod-28.jpg", label: "Aberturas y luz natural" },
+                  { src: "/images/mod-19.jpg", label: "Interior: terminaciones modernas" },
+                  { src: "/images/mod-28.jpg", label: "Aberturas y luz natural" },
                 ],
               },
               {
@@ -39,8 +39,8 @@ export default function Home() {
                 leftTitle: "Principios de 2025",
                 text: "Definimos el objetivo del módulo y el tipo de uso. Te guiamos con tipologías y tiempos.",
                 media: [
-                  { src: "public/images/mod-36.jpg", label: "Módulos compactos para oficina / monoambiente" },
-                  { src: "public/images/mod-48.jpg", label: "Vivienda compacta con expansión" },
+                  { src: "/images/mod-36.jpg", label: "Módulos compactos para oficina / monoambiente" },
+                  { src: "/images/mod-48.jpg", label: "Vivienda compacta con expansión" },
                 ],
               },
               {
@@ -49,8 +49,8 @@ export default function Home() {
                 leftTitle: "2025",
                 text: "Definimos el objetivo del módulo y el tipo de uso. Te guiamos con tipologías y tiempos.",
                 media: [
-                  { src: "public/images/mod-36.jpg", label: "Módulos compactos para oficina / monoambiente" },
-                  { src: "public/images/mod-48.jpg", label: "Vivienda compacta con expansión" },
+                  { src: "/images/mod-36.jpg", label: "Módulos compactos para oficina / monoambiente" },
+                  { src: "/images/mod-48.jpg", label: "Vivienda compacta con expansión" },
                 ],
               },
             ]}
