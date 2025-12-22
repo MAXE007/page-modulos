@@ -11,7 +11,7 @@
 .hero__bg {
   position: absolute;
   inset: 0;
-  background-image: url("/images/mod-19.jpg");
+  background-image: url("/images/portada.jpg");
   background-size: cover;
   background-position: center;
   transform: scale(1.02);

@@ -1,13 +1,13 @@
 import Hero from "../Hero/Hero";
 import "./Home.css";
 import Timeline from "../../components/Timeline/Timeline";
+import WhyFast from "../../sections/WhyFast/WhyFast";
 
 export default function Home() {
   return (
     <main className="home">
       <Hero />
-
-      {/* contenido para que el scroll tenga destino */}
+      <WhyFast />
       <section className="home__below" id="contenido">
         <div className="home__inner">
           <Timeline
@@ -58,6 +58,7 @@ export default function Home() {
 
         </div>
       </section>
+      
     </main>
   );
 }
