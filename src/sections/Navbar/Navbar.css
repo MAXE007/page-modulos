@@ -19,39 +19,51 @@
 }
 
 .nav__inner {
-  height: 64px;
-  max-width: 1120px;
+  height: 72px; /* subimos un poco el navbar */
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 18px;
+  padding: 0 24px;
 
   display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  justify-content: space-between;
-  grid-template-columns: 1fr auto 1fr; /* brand | links | espacio */
 }
 
 .nav__brand {
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-decoration: none;
-  color: #ffffff;
-  transition: color 220ms ease;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
-.nav--scrolled .nav__brand {
-  color: #0f0f0f;
+/* Logo */
+.nav__logo {
+  height: 60px;        /* <-- tamaño visual real */
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Para que se lea bien sobre el hero (navbar transparente) */
+.nav:not(.nav--scrolled) .nav__logo {
+  filter: drop-shadow(0 6px 14px rgba(0,0,0,0.35));
+}
+
+/* En scrolled, normalmente no hace falta sombra */
+.nav--scrolled .nav__logo {
+  filter: none;
 }
 
 .nav__links {
+  justify-self: center; /* links al centro */
   display: flex;
   gap: 22px;
   align-items: center;
-  justify-self: center; /* links al centro */
+  white-space: nowrap; /* evita salto de línea */
 }
 
 .nav__link {
   text-decoration: none;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 600;
   letter-spacing: 0.02em;
   color: rgba(255, 255, 255, 0.9);
@@ -83,7 +95,6 @@
 
 /* Burger (mobile) */
 .nav__burger {
-  grid-column: 3;
   justify-self: end;
   display: none;              /* solo mobile */
   width: 44px;
@@ -93,7 +104,6 @@
   border: 0;
   cursor: pointer;
 
-  /* layout interno del icono */
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -161,4 +171,5 @@
   .nav__mobile {
     display: block;
   }
+
 }

@@ -24,7 +24,12 @@ export default function Navbar() {
     <header className={`nav ${scrolled ? "nav--scrolled" : ""} ${open ? "nav--open" : ""}`}>
       <div className="nav__inner">
         <NavLink to="/" className="nav__brand" aria-label="Ir al inicio">
-          FAST
+          <img
+            src="/images/logo.png"
+            alt="FAST"
+            className="nav__logo"
+            draggable="false"
+          />
         </NavLink>
 
         <nav className="nav__links" aria-label="Navegación principal">
