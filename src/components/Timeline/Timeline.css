@@ -1,5 +1,5 @@
 .atl {
-  padding: 84px 18px;
+  padding: 56px 18px;
   background: #0b0b0c;
   color: #fff;
   width: 100vw;
@@ -70,7 +70,7 @@
 .atl__items {
   display: flex;
   flex-direction: column;
-  gap: 200px;
+  gap: 120px;
 }
 
 /* cada fila: izquierda (titulo grande) + derecha (contenido) */
@@ -79,7 +79,7 @@
   grid-template-columns: minmax(280px, 420px) 1fr;
   gap: 26px;
   align-items: start;
-  padding: 70px 0;
+  padding: 32px 0;
 }
 
 .atl__left {

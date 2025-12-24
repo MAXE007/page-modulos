@@ -8,10 +8,10 @@ export const PRODUCTS = [
     bathroom: true,
     delivery: "Entrega inmediata",
     images: [
-      "/images/mod-19.jpg",
-      "/images/mod-36.jpg",
-      "/images/mod-28.jpg",
-      "/images/mod-48.jpg"
+      "/images/modulo 1.0.jpeg",
+      "/images/modulo 1.1.jpeg",
+      "/images/modulo 1.2.jpeg",
+      "/images/modulo 1.3.jpeg"
     ],
     specs: [
       "Estructura metálica reforzada",
