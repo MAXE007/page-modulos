@@ -1,8 +1,19 @@
 .home__below {
-  background: #f3f3f3;
+  background: transparent;
 }
 
 .home__inner {
   max-width: 1120px;
   margin: 0 auto;
+}
+.home__projects {
+  /* full-width como tus otras secciones */
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+
+  background: #1e8a928a;
+  position: relative;
+  isolation: isolate; /* corta overlays/filtros del parent */
+  z-index: 0;
 }

@@ -1,7 +1,8 @@
 import Hero from "../Hero/Hero";
 import "./Home.css";
-import Timeline from "../../components/Timeline/Timeline";
 import WhyFast from "../../sections/WhyFast/WhyFast";
+import Timeline from "../../components/Timeline/Timeline";
+import ProjectsCarousel from "../../components/ProjectsCarousel/ProjectsCarousel";
 
 export default function Home() {
   return (
@@ -55,10 +56,11 @@ export default function Home() {
               },
             ]}
           />
-
         </div>
       </section>
-      
+      <section className="home__projects">
+        <ProjectsCarousel />
+      </section>
     </main>
   );
 }

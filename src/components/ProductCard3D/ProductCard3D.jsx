@@ -32,19 +32,6 @@ export default function ProductCard3D({ product }) {
         </CardItem>
 
         <div className="pc__actions">
-          <CardItem
-            translateZ={30}
-            as="a"
-            className="pc__wa"
-            href={`https://wa.me/5492610000000?text=${encodeURIComponent(
-              `Hola! Quiero consultar por: ${product.name}`
-            )}`}
-            target="_blank"
-            rel="noreferrer"
-          >
-            WhatsApp
-          </CardItem>
-
           <CardItem translateZ={30} as={Link} to={`/tipologias/${product.id}`} className="pc__more">
             Ver más
           </CardItem>
