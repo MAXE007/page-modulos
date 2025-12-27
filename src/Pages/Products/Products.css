@@ -5,6 +5,7 @@
   background-position: center;
   background-attachment: fixed;
   position: relative;
+  padding-top: 64px;
 }
 
 .tipos > * {
@@ -33,7 +34,7 @@
 .tipos__head h1 {
   color: aliceblue;
   margin: 0 0 6px;
-  font-size: 34px;
+  font-size: 54px;
 }
 
 .tipos__head p {

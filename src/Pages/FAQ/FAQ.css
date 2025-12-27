@@ -38,9 +38,8 @@
   margin: 0 0 10px 0;
   color: #fff;
   font-size: clamp(30px, 3vw, 44px);
-  font-weight: 800;
+
   letter-spacing: -0.02em;
-  text-transform: uppercase;
 }
 
 .faqPage__subtitle {

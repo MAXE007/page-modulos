@@ -1,7 +1,32 @@
 .pd {
+  min-height: 100vh;
+  position: relative;
+
+  /* en vez de margin-top */
+  padding-top: 64px;
+
+  /* el padding lateral y bottom lo manejamos en el container */
+  background: url("/images/pinos.jpg") center / cover no-repeat;
+}
+
+.pd__container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 24px 16px 50px;
+}
+
+.pd::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.pd > * {
+  position: relative;
+  z-index: 1;
 }
 
 .pd__back {
@@ -235,6 +260,82 @@
   outline-offset: 2px;
 }
 
+
+/* Hacer que en mobile sea natural el swipe */
+.pd__imageWrap {
+  touch-action: pan-y;
+}
+
+/* Lightbox */
+.pd__lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.82);
+  display: grid;
+  place-items: center;
+  padding: 18px;
+}
+
+.pd__lightboxInner {
+  position: relative;
+  width: min(1100px, 100%);
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(10, 10, 10, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.pd__lightboxImg {
+  width: 100%;
+  height: min(78vh, 720px);
+  object-fit: contain;
+  display: block;
+  background: #000;
+}
+
+.pd__lightboxClose {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.pd__lightboxNav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.pd__lightboxNav--left { left: 10px; }
+.pd__lightboxNav--right { right: 10px; }
+
+/* swipe natural */
+.pd__imageWrap {
+  touch-action: pan-y;
+}
+
+/* lightbox: permitir swipe también (sin “rebotes” raros) */
+.pd__lightboxInner {
+  touch-action: pan-y;
+}
+/* RESPONSIVE */
 @media (max-width: 900px) {
   .pd__layout { grid-template-columns: 1fr; }
   .pd__img, .pd__imgFallback { height: 320px; }
@@ -243,5 +344,10 @@
 @media (max-width: 768px) {
   .pd__arrow {
     display: none;
+  }
+  .pd__lightboxNav {
+    width: 40px;
+    height: 40px;
+    font-size: 26px;
   }
 }

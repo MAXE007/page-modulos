@@ -5,6 +5,7 @@
   padding: 96px 18px;
   position: relative;
   background: url("/images/pinos.jpg") center / cover no-repeat;
+  padding-top: 64px;
 }
 
 .contactPage::before {
@@ -33,10 +34,8 @@
 .contactPage__title {
   margin: 0 0 10px 0;
   color: #fff;
-  font-size: clamp(30px, 3vw, 44px);
-  font-weight: 800;
+  font-size: 54px;
   letter-spacing: -0.02em;
-  text-transform: uppercase;
 }
 
 .contactPage__subtitle {
