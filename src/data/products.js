@@ -19,6 +19,18 @@ export const PRODUCTS = [
       "Aberturas de aluminio",
       "Instalación eléctrica completa",
     ],
+
+    // ✅ NUEVO
+    aboutTitle: "Sobre este módulo",
+    aboutText:
+      "Pensado para quienes necesitan un espacio funcional, rápido de instalar y con excelente aislación. Es ideal como oficina privada, monoambiente o módulo de apoyo en un terreno. Se entrega listo para usar, con instalación eléctrica completa y terminaciones prolijas.",
+    highlights: [
+      { label: "Uso recomendado", value: "Oficina / monoambiente / anexo" },
+      { label: "Instalación", value: "Rápida, con mínima obra" },
+      { label: "Aislación", value: "Térmica y acústica" },
+      { label: "Entrega", value: "Lista para habitar" },
+      { label: "Hola", value: "jujuvsdvsdvdsvsdvsdvdsvds svsdvsdv sdvdsvsdvsdvsdv sdvsd fasfasfasfsa fasfas" },
+    ],
   },
   {
     id: "mod-28",
@@ -39,6 +51,17 @@ export const PRODUCTS = [
       "Baño completo",
       "Terminaciones premium",
       "Opciones de personalización",
+    ],
+    // ✅ NUEVO
+    aboutTitle: "Sobre este módulo",
+    aboutText:
+      "Pensado para quienes necesitan un espacio funcional, rápido de instalar y con excelente aislación. Es ideal como oficina privada, monoambiente o módulo de apoyo en un terreno. Se entrega listo para usar, con instalación eléctrica completa y terminaciones prolijas.",
+    highlights: [
+      { label: "Uso recomendado", value: "Oficina / monoambiente / anexo" },
+      { label: "Instalación", value: "Rápida, con mínima obra" },
+      { label: "Aislación", value: "Térmica y acústica" },
+      { label: "Entrega", value: "Lista para habitar" },
+      { label: "Hola", value: "jujuvsdvsdvdsvsdvsdvdsvds svsdvsdv sdvdsvsdvsdvsdv sdvsd fasfasfasfsa fasfas" },
     ],
   },
   {
@@ -61,6 +84,17 @@ export const PRODUCTS = [
       "Terminaciones premium",
       "Personalizable por catálogo",
     ],
+    // ✅ NUEVO
+    aboutTitle: "Sobre este módulo",
+    aboutText:
+      "Pensado para quienes necesitan un espacio funcional, rápido de instalar y con excelente aislación. Es ideal como oficina privada, monoambiente o módulo de apoyo en un terreno. Se entrega listo para usar, con instalación eléctrica completa y terminaciones prolijas.",
+    highlights: [
+      { label: "Uso recomendado", value: "Oficina / monoambiente / anexo" },
+      { label: "Instalación", value: "Rápida, con mínima obra" },
+      { label: "Aislación", value: "Térmica y acústica" },
+      { label: "Entrega", value: "Lista para habitar" },
+      { label: "Hola", value: "jujuvsdvsdvdsvsdvsdvdsvds svsdvsdv sdvdsvsdvsdvsdv sdvsd fasfasfasfsa fasfas" },
+    ],
   },
   {
     id: "mod-48",
@@ -81,6 +115,17 @@ export const PRODUCTS = [
       "Opciones 1 o 2 dormitorios",
       "Aislación reforzada",
       "Preparado para base/platea",
+    ],
+    // ✅ NUEVO
+    aboutTitle: "Sobre este módulo",
+    aboutText:
+      "Pensado para quienes necesitan un espacio funcional, rápido de instalar y con excelente aislación. Es ideal como oficina privada, monoambiente o módulo de apoyo en un terreno. Se entrega listo para usar, con instalación eléctrica completa y terminaciones prolijas.",
+    highlights: [
+      { label: "Uso recomendado", value: "Oficina / monoambiente / anexo" },
+      { label: "Instalación", value: "Rápida, con mínima obra" },
+      { label: "Aislación", value: "Térmica y acústica" },
+      { label: "Entrega", value: "Lista para habitar" },
+      { label: "Hola", value: "jujuvsdvsdvdsvsdvsdvdsvds svsdvsdv sdvdsvsdvsdvsdv sdvsd fasfasfasfsa fasfas" },
     ],
   },
 ];

@@ -109,7 +109,7 @@ export default function Footer() {
                   </svg>
                 </span>
                 <div>
-                  <span className="footer__value">Mendoza, Argentina</span>
+                  <span className="footer__value">San Rafael, Mendoza, Argentina</span>
                 </div>
               </div>
             </div>

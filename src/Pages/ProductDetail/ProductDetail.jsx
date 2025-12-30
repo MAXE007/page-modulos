@@ -219,6 +219,24 @@ export default function ProductDetail() {
             </div>
           </section>
         </div>
+
+        {/* DESCRIPCIÓN DETALLADA */}
+        <section className="pd__about">
+          <h2 className="pd__aboutTitle">{product.aboutTitle ?? "Sobre este módulo"}</h2>
+          {product.aboutText && <p className="pd__aboutText">{product.aboutText}</p>}
+
+          {product.highlights?.length ? (
+            <div className="pd__highlights">
+              {product.highlights.map((h) => (
+                <div className="pd__highlight" key={h.label}>
+                  <span className="pd__highlightLabel">{h.label}</span>
+                  <span className="pd__highlightValue">{h.value}</span>
+                </div>
+              ))}
+            </div>
+          ) : null}
+        </section>
+        
       </div>          
       {/* LIGHTBOX (con swipe adentro) */}
       {lightboxOpen && (

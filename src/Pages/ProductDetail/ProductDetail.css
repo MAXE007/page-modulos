@@ -260,6 +260,31 @@
   outline-offset: 2px;
 }
 
+/* INFO CARACTERÍSTICAS */
+.pd__info {
+  background: rgba(12, 12, 12, 0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  padding: 22px 22px 26px;
+  color: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+}
+
+.pd__title { color: #fff; }
+.pd__subtitle { color: rgba(255,255,255,0.70); }
+
+/* chips: que no queden grises “feos” */
+.pd__chips span {
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.88);
+}
+
+/* lista */
+.pd__list li { color: rgba(255,255,255,0.88); }
+
 
 /* Hacer que en mobile sea natural el swipe */
 .pd__imageWrap {
@@ -335,10 +360,75 @@
 .pd__lightboxInner {
   touch-action: pan-y;
 }
+
+/* Descripción detallada */
+.pd__about {
+  margin-top: 18px;
+  padding: 22px;
+  border-radius: 18px;
+
+  background: rgba(12, 12, 12, 0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  color: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.30);
+}
+
+.pd__aboutTitle {
+  margin: 0 0 10px;
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 0.01em;
+}
+
+.pd__aboutText {
+  margin: 0 0 14px;
+  color: rgba(255,255,255,0.78);
+  line-height: 1.7;
+  max-width: 78ch;
+}
+
+.pd__highlights {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.pd__highlight {
+  padding: 12px 12px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+.pd__highlightLabel {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.60);
+  margin-bottom: 6px;
+}
+
+.pd__highlightValue {
+  display: block;
+  font-weight: 700;
+  color: rgba(255,255,255,0.92);
+}
+
 /* RESPONSIVE */
 @media (max-width: 900px) {
-  .pd__layout { grid-template-columns: 1fr; }
-  .pd__img, .pd__imgFallback { height: 320px; }
+  .pd__layout { 
+    grid-template-columns: 1fr; 
+  }
+  .pd__img, .pd__imgFallback { 
+    height: 320px; 
+  }
+  .pd__highlights {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 768px) {
