@@ -35,11 +35,8 @@
 }
 
 .faqPage__title {
-  margin: 0 0 10px 0;
   color: #fff;
-  font-size: clamp(30px, 3vw, 44px);
-
-  letter-spacing: -0.02em;
+  font-size: 54px
 }
 
 .faqPage__subtitle {

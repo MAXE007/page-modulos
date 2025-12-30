@@ -1,9 +1,6 @@
 .tipos {
   min-height: 100vh;
-  background-image: url("/images/pinos.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background: url("/images/pinos.jpg") center / cover no-repeat;
   position: relative;
   padding-top: 64px;
 }
@@ -32,8 +29,7 @@
 }
 
 .tipos__head h1 {
-  color: aliceblue;
-  margin: 0 0 6px;
+  color: #fff;
   font-size: 54px;
 }
 
