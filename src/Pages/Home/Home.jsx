@@ -16,9 +16,9 @@ export default function Home() {
             items={[
               {
                 id: "a1",
-                kicker: "Inicio",
+                kicker: "Nuestros comienzos",
                 leftTitle: "2023",
-                text: "Definimos el objetivo del módulo y el tipo de uso. Te guiamos con tipologías y tiempos.",
+                text: "Alli en el año 2023 comenzabamos con este sueño de fabricar modulos trasladables rapidos y faciles de colocar para que personas de distintos lugares del pais puedan tener su hogar u oficina en tiempo record",
                 media: [
                   { src: "/images/mod-36.jpg", label: "Módulos compactos para oficina / monoambiente" },
                   { src: "/images/mod-48.jpg", label: "Vivienda compacta con expansión" },
@@ -28,7 +28,7 @@ export default function Home() {
                 id: "a2",
                 kicker: "Definición",
                 leftTitle: "2024",
-                text: "Ajustamos distribución, terminaciones y logística. Todo queda documentado antes de avanzar.",
+                text: "Aqui ya teniamos clara nuestra vision y lo que hicimos fue asentarnos en el mercado ya con mas productos a disposicion de las personas.",
                 media: [
                   { src: "/images/mod-19.jpg", label: "Interior: terminaciones modernas" },
                   { src: "/images/mod-28.jpg", label: "Aberturas y luz natural" },
