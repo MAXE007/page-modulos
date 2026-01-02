@@ -13,22 +13,23 @@ export function CardContainer({ className = "", children }) {
 
 export function CardBody({ className = "", children }) {
   const ref = useRef(null);
+  const raf = useRef(0);
 
-  const onMove = (e) => {
+  const setVarsFromPoint = (clientX, clientY) => {
     const el = ref.current;
     if (!el) return;
 
     const rect = el.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
+    const x = clientX - rect.left;
+    const y = clientY - rect.top;
 
-    const px = x / rect.width;   // 0..1
-    const py = y / rect.height;  // 0..1
-    const mx = (px - 0.5) * 2;   // -1..1
-    const my = (py - 0.5) * 2;   // -1..1
+    const px = x / rect.width;
+    const py = y / rect.height;
+    const mx = (px - 0.5) * 2;
+    const my = (py - 0.5) * 2;
 
-    const rotateY = mx * 7;     // deg
-    const rotateX = -my * 5;     // deg
+    const rotateY = mx * 7;
+    const rotateX = -my * 5;
 
     el.style.setProperty("--rx", `${rotateX}deg`);
     el.style.setProperty("--ry", `${rotateY}deg`);
@@ -36,7 +37,7 @@ export function CardBody({ className = "", children }) {
     el.style.setProperty("--my", `${my}`);
   };
 
-  const onLeave = () => {
+  const resetVars = () => {
     const el = ref.current;
     if (!el) return;
     el.style.setProperty("--rx", `0deg`);
@@ -45,19 +46,56 @@ export function CardBody({ className = "", children }) {
     el.style.setProperty("--my", `0`);
   };
 
+  const scheduleMove = (clientX, clientY) => {
+    if (raf.current) cancelAnimationFrame(raf.current);
+    raf.current = requestAnimationFrame(() => setVarsFromPoint(clientX, clientY));
+  };
+
+  const onPointerMove = (e) => {
+    scheduleMove(e.clientX, e.clientY);
+  };
+
+  const onPointerEnter = (e) => {
+    // mouse hover: primera actualización inmediata
+    scheduleMove(e.clientX, e.clientY);
+  };
+
+  const onPointerLeave = () => {
+    resetVars();
+  };
+
+  const onPointerDown = (e) => {
+    // touch: capturamos para seguir el dedo dentro de la card
+    e.currentTarget.setPointerCapture?.(e.pointerId);
+    scheduleMove(e.clientX, e.clientY);
+  };
+
+  const onPointerUp = (e) => {
+    e.currentTarget.releasePointerCapture?.(e.pointerId);
+    resetVars();
+  };
+
+  const onPointerCancel = (e) => {
+    e.currentTarget.releasePointerCapture?.(e.pointerId);
+    resetVars();
+  };
+
   return (
-    <MouseCtx.Provider value={{}}>
-      <div
-        ref={ref}
-        className={`card3d-body ${className}`}
-        onMouseMove={onMove}
-        onMouseLeave={onLeave}
-      >
-        {children}
-      </div>
-    </MouseCtx.Provider>
+    <div
+      ref={ref}
+      className={`card3d-body ${className}`}
+      onPointerEnter={onPointerEnter}
+      onPointerMove={onPointerMove}
+      onPointerLeave={onPointerLeave}
+      onPointerDown={onPointerDown}
+      onPointerUp={onPointerUp}
+      onPointerCancel={onPointerCancel}
+    >
+      {children}
+    </div>
   );
 }
+
 
 /**
  * CardItem: “sale” en Z y puede usar el parallax del mouse.

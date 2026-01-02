@@ -1,4 +1,6 @@
 .pc {
+  position: relative;
+  isolation: isolate;
   border-radius: 22px;
   overflow: hidden;
 
@@ -35,6 +37,12 @@
   );
   pointer-events: none;
   z-index: 0;
+}
+
+/* ✅ asegurar que el contenido quede arriba del overlay */
+.pc > * {
+  position: relative;
+  z-index: 1;
 }
 
 .pc__title {

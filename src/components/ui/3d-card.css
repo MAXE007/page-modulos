@@ -11,6 +11,8 @@
   transform: rotateX(var(--rx)) rotateY(var(--ry));
   transform-style: preserve-3d;
   transition: transform 160ms ease, box-shadow 160ms ease;
+  touch-action: pan-y;
+  will-change: transform;
 }
 
 .card3d-body:hover {
