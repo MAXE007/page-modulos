@@ -28,8 +28,8 @@ export function CardBody({ className = "", children }) {
     const mx = (px - 0.5) * 2;
     const my = (py - 0.5) * 2;
 
-    const rotateY = mx * 7;
-    const rotateX = -my * 5;
+    const rotateY = mx * 13;
+    const rotateX = -my * 9;
 
     el.style.setProperty("--rx", `${rotateX}deg`);
     el.style.setProperty("--ry", `${rotateY}deg`);

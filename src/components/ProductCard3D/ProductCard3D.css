@@ -39,6 +39,17 @@
   z-index: 0;
 }
 
+.pc::after {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.10), transparent 55%);
+  transform: translate3d(calc(var(--mx) * 18px), calc(var(--my) * 14px), 0);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.9;
+}
+
 /* ✅ asegurar que el contenido quede arriba del overlay */
 .pc > * {
   position: relative;
@@ -72,7 +83,7 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  transform: translate3d(calc(var(--mx) * 10px), calc(var(--my) * 8px), 0px) scale(1.06);
+  transform: translate3d(calc(var(--mx) * 16px), calc(var(--my) * 12px), 0px) scale(1.10);
   transition: transform 120ms ease;
 }
 

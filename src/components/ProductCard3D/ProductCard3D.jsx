@@ -8,15 +8,15 @@ export default function ProductCard3D({ product }) {
   return (
     <CardContainer>
       <CardBody className="pc">
-        <CardItem translateZ={70} className="pc__title">
+        <CardItem translateZ={90} className="pc__title">
           {product.name}
         </CardItem>
 
-        <CardItem translateZ={55} as="p" className="pc__subtitle">
+        <CardItem translateZ={70} as="p" className="pc__subtitle">
           {product.subtitle}
         </CardItem>
 
-        <CardItem translateZ={110} className="pc__media">
+        <CardItem translateZ={160} className="pc__media">
           {cover ? (
             <img className="pc__img" src={cover} alt={product.name} />
           ) : (
@@ -24,7 +24,7 @@ export default function ProductCard3D({ product }) {
           )}
         </CardItem>
 
-        <CardItem translateZ={40} className="pc__meta">
+        <CardItem translateZ={55} className="pc__meta">
           <span>{product.m2} m²</span>
           <span>Ambientes: {product.rooms}</span>
           <span>{product.bathroom ? "Con baño" : "Sin baño"}</span>
@@ -32,7 +32,7 @@ export default function ProductCard3D({ product }) {
         </CardItem>
 
         <div className="pc__actions">
-          <CardItem translateZ={30} as={Link} to={`/tipologias/${product.id}`} className="pc__more">
+          <CardItem translateZ={45} as={Link} to={`/tipologias/${product.id}`} className="pc__more">
             Ver más
           </CardItem>
         </div>
