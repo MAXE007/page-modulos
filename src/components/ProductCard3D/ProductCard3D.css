@@ -120,4 +120,11 @@
   padding: 10px 14px;
   border-radius: 10px;
   font-weight: 900;
+  cursor: pointer;
+}
+
+.pc__actions,
+.pc__more {
+  position: relative;
+  z-index: 5;
 }
