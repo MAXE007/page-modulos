@@ -1,3 +1,12 @@
+import React, { createContext, useRef } from "react";
+import "./3d-card.css";
+
+const MouseCtx = createContext({});
+
+export function CardContainer({ className = "", children }) {
+  return <div className={`card3d-container ${className}`}>{children}</div>;
+}
+
 export function CardBody({ className = "", children }) {
   const ref = useRef(null);
   const raf = useRef(0);
@@ -104,5 +113,26 @@ export function CardBody({ className = "", children }) {
     >
       {children}
     </div>
+  );
+}
+
+
+export function CardItem({
+  as: Tag = "div",
+  translateZ = 0,
+  className = "",
+  children,
+  ...props
+}) {
+  return (
+    <Tag
+      className={`card3d-item ${className}`}
+      style={{
+        transform: `translate3d(calc(var(--mx) * 6px), calc(var(--my) * 4px), ${translateZ}px)`,
+      }}
+      {...props}
+    >
+      {children}
+    </Tag>
   );
 }
