@@ -1,19 +1,9 @@
-import React, { createContext, useRef } from "react";
-import "./3d-card.css";
-
-const MouseCtx = createContext({});
-
-export function CardContainer({ className = "", children }) {
-  return <div className={`card3d-container ${className}`}>{children}</div>;
-}
-
 export function CardBody({ className = "", children }) {
   const ref = useRef(null);
-  const isDown = useRef(false);
-  const start = useRef({ x: 0, y: 0 });
-  const pointerType = useRef("mouse");
+  const raf = useRef(0);
+  const isTouching = useRef(false);
 
-  const setTiltFromPoint = (clientX, clientY) => {
+  const setVarsFromPoint = (clientX, clientY) => {
     const el = ref.current;
     if (!el) return;
 
@@ -26,8 +16,8 @@ export function CardBody({ className = "", children }) {
     const mx = (px - 0.5) * 2;
     const my = (py - 0.5) * 2;
 
-    const rotateY = mx * 9;  // subí si querés más
-    const rotateX = -my * 7;
+    const rotateY = mx * 13;
+    const rotateX = -my * 9;
 
     el.style.setProperty("--rx", `${rotateX}deg`);
     el.style.setProperty("--ry", `${rotateY}deg`);
@@ -35,7 +25,7 @@ export function CardBody({ className = "", children }) {
     el.style.setProperty("--my", `${my}`);
   };
 
-  const reset = () => {
+  const resetVars = () => {
     const el = ref.current;
     if (!el) return;
     el.style.setProperty("--rx", `0deg`);
@@ -44,86 +34,75 @@ export function CardBody({ className = "", children }) {
     el.style.setProperty("--my", `0`);
   };
 
+  const scheduleMove = (clientX, clientY) => {
+    if (raf.current) cancelAnimationFrame(raf.current);
+    raf.current = requestAnimationFrame(() => setVarsFromPoint(clientX, clientY));
+  };
+
+  const onPointerEnter = (e) => {
+    // desktop hover
+    if (e.pointerType === "mouse") scheduleMove(e.clientX, e.clientY);
+  };
+
+  const onPointerMove = (e) => {
+    // desktop: siempre
+    if (e.pointerType === "mouse") {
+      scheduleMove(e.clientX, e.clientY);
+      return;
+    }
+
+    // touch: solo mientras estamos tocando
+    if (e.pointerType === "touch" && isTouching.current) {
+      scheduleMove(e.clientX, e.clientY);
+    }
+  };
+
+  const onPointerLeave = () => {
+    isTouching.current = false;
+    resetVars();
+  };
+
   const onPointerDown = (e) => {
-    // Si tocaste un link/botón, NO activamos tilt ni bloqueamos nada
-    if (e.target.closest("a,button")) return;
+    isTouching.current = e.pointerType === "touch";
 
-    pointerType.current = e.pointerType; // "mouse" | "touch" | "pen"
-    isDown.current = true;
-    start.current = { x: e.clientX, y: e.clientY };
+    // ✅ SIEMPRE arrancamos el efecto (aunque el dedo esté sobre el link)
+    scheduleMove(e.clientX, e.clientY);
 
-    // Solo capturamos en touch para que el movimiento sea estable
-    if (e.pointerType === "touch") {
+    // ✅ Pero SOLO capturamos si NO tocaste un elemento interactivo
+    const isInteractive = !!e.target.closest("a,button");
+    if (e.pointerType === "touch" && !isInteractive) {
       e.currentTarget.setPointerCapture?.(e.pointerId);
     }
   };
 
-  const onPointerMove = (e) => {
-    const el = ref.current;
-    if (!el) return;
-
-    // Mouse: tilt siempre con hover/move
-    if (e.pointerType === "mouse") {
-      setTiltFromPoint(e.clientX, e.clientY);
-      return;
+  const onPointerUp = (e) => {
+    isTouching.current = false;
+    if (e.pointerType === "touch") {
+      e.currentTarget.releasePointerCapture?.(e.pointerId);
     }
-
-    // Touch: tilt SOLO cuando el dedo está presionado (evita cosas raras)
-    if (!isDown.current) return;
-
-    const dx = Math.abs(e.clientX - start.current.x);
-    const dy = Math.abs(e.clientY - start.current.y);
-
-    // Si es un gesto vertical fuerte, dejá que scrollee y no fuerces tilt
-    if (dy > dx && dy > 12) return;
-
-    // Si es movimiento horizontal/leve, aplicamos tilt
-    setTiltFromPoint(e.clientX, e.clientY);
+    resetVars();
   };
 
-  const onPointerUp = () => {
-    isDown.current = false;
-    reset();
-  };
-
-  const onPointerLeave = () => {
-    isDown.current = false;
-    reset();
+  const onPointerCancel = (e) => {
+    isTouching.current = false;
+    if (e.pointerType === "touch") {
+      e.currentTarget.releasePointerCapture?.(e.pointerId);
+    }
+    resetVars();
   };
 
   return (
-    <MouseCtx.Provider value={{}}>
-      <div
-        ref={ref}
-        className={`card3d-body ${className}`}
-        onPointerDown={onPointerDown}
-        onPointerMove={onPointerMove}
-        onPointerUp={onPointerUp}
-        onPointerCancel={onPointerUp}
-        onPointerLeave={onPointerLeave}
-      >
-        {children}
-      </div>
-    </MouseCtx.Provider>
-  );
-}
-
-export function CardItem({
-  as: Tag = "div",
-  translateZ = 0,
-  className = "",
-  children,
-  ...props
-}) {
-  return (
-    <Tag
-      className={`card3d-item ${className}`}
-      style={{
-        transform: `translate3d(calc(var(--mx) * 6px), calc(var(--my) * 4px), ${translateZ}px)`,
-      }}
-      {...props}
+    <div
+      ref={ref}
+      className={`card3d-body ${className}`}
+      onPointerEnter={onPointerEnter}
+      onPointerMove={onPointerMove}
+      onPointerLeave={onPointerLeave}
+      onPointerDown={onPointerDown}
+      onPointerUp={onPointerUp}
+      onPointerCancel={onPointerCancel}
     >
       {children}
-    </Tag>
+    </div>
   );
 }
