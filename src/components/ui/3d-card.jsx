@@ -10,7 +10,6 @@ export function CardContainer({ className = "", children }) {
 export function CardBody({ className = "", children }) {
   const ref = useRef(null);
   const raf = useRef(0);
-  const isTouching = useRef(false);
 
   const setVarsFromPoint = (clientX, clientY) => {
     const el = ref.current;
@@ -22,9 +21,10 @@ export function CardBody({ className = "", children }) {
 
     const px = x / rect.width;
     const py = y / rect.height;
-    const mx = (px - 0.5) * 2;
-    const my = (py - 0.5) * 2;
+    const mx = (px - 0.5) * 2; // -1..1
+    const my = (py - 0.5) * 2; // -1..1
 
+    // Intensidad (la “fuerte” que te gustaba)
     const rotateY = mx * 13;
     const rotateX = -my * 9;
 
@@ -37,10 +37,11 @@ export function CardBody({ className = "", children }) {
   const resetVars = () => {
     const el = ref.current;
     if (!el) return;
-    el.style.setProperty("--rx", `0deg`);
-    el.style.setProperty("--ry", `0deg`);
-    el.style.setProperty("--mx", `0`);
-    el.style.setProperty("--my", `0`);
+
+    el.style.setProperty("--rx", "0deg");
+    el.style.setProperty("--ry", "0deg");
+    el.style.setProperty("--mx", "0");
+    el.style.setProperty("--my", "0");
   };
 
   const scheduleMove = (clientX, clientY) => {
@@ -48,75 +49,64 @@ export function CardBody({ className = "", children }) {
     raf.current = requestAnimationFrame(() => setVarsFromPoint(clientX, clientY));
   };
 
-  const onPointerEnter = (e) => {
-    // desktop hover
-    if (e.pointerType === "mouse") scheduleMove(e.clientX, e.clientY);
+  const onPointerMove = (e) => {
+    scheduleMove(e.clientX, e.clientY);
   };
 
-  const onPointerMove = (e) => {
-    // desktop: siempre
-    if (e.pointerType === "mouse") {
-      scheduleMove(e.clientX, e.clientY);
-      return;
-    }
-
-    // touch: solo mientras estamos tocando
-    if (e.pointerType === "touch" && isTouching.current) {
-      scheduleMove(e.clientX, e.clientY);
-    }
+  const onPointerEnter = (e) => {
+    scheduleMove(e.clientX, e.clientY);
   };
 
   const onPointerLeave = () => {
-    isTouching.current = false;
     resetVars();
   };
 
   const onPointerDown = (e) => {
-    isTouching.current = e.pointerType === "touch";
+    // ✅ Si tocaste/clickeaste sobre un elemento interactivo, NO capturamos el pointer
+    // para no romper el click del Link/Button.
+    const isInteractive = !!e.target.closest(
+      "a, button, input, textarea, select, label"
+    );
 
-    // ✅ SIEMPRE arrancamos el efecto (aunque el dedo esté sobre el link)
-    scheduleMove(e.clientX, e.clientY);
-
-    // ✅ Pero SOLO capturamos si NO tocaste un elemento interactivo
-    const isInteractive = !!e.target.closest("a,button");
-    if (e.pointerType === "touch" && !isInteractive) {
+    if (!isInteractive) {
       e.currentTarget.setPointerCapture?.(e.pointerId);
     }
+
+    scheduleMove(e.clientX, e.clientY);
   };
 
   const onPointerUp = (e) => {
-    isTouching.current = false;
-    if (e.pointerType === "touch") {
-      e.currentTarget.releasePointerCapture?.(e.pointerId);
-    }
+    e.currentTarget.releasePointerCapture?.(e.pointerId);
     resetVars();
   };
 
   const onPointerCancel = (e) => {
-    isTouching.current = false;
-    if (e.pointerType === "touch") {
-      e.currentTarget.releasePointerCapture?.(e.pointerId);
-    }
+    e.currentTarget.releasePointerCapture?.(e.pointerId);
     resetVars();
   };
 
   return (
-    <div
-      ref={ref}
-      className={`card3d-body ${className}`}
-      onPointerEnter={onPointerEnter}
-      onPointerMove={onPointerMove}
-      onPointerLeave={onPointerLeave}
-      onPointerDown={onPointerDown}
-      onPointerUp={onPointerUp}
-      onPointerCancel={onPointerCancel}
-    >
-      {children}
-    </div>
+    <MouseCtx.Provider value={{}}>
+      <div
+        ref={ref}
+        className={`card3d-body ${className}`}
+        onPointerEnter={onPointerEnter}
+        onPointerMove={onPointerMove}
+        onPointerLeave={onPointerLeave}
+        onPointerDown={onPointerDown}
+        onPointerUp={onPointerUp}
+        onPointerCancel={onPointerCancel}
+      >
+        {children}
+      </div>
+    </MouseCtx.Provider>
   );
 }
 
-
+/**
+ * CardItem: “sale” en Z y puede usar el parallax del pointer.
+ * translateZ: number (px) recomendado 10..140
+ */
 export function CardItem({
   as: Tag = "div",
   translateZ = 0,
