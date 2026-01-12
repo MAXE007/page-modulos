@@ -1,24 +1,3 @@
-.tipos {
-  min-height: 100vh;
-  background: url("/images/pinos.jpg") center / cover no-repeat;
-  position: relative;
-  padding-top: 64px;
-}
-
-.tipos > * {
-  position: relative;
-  z-index: 1;
-}
-
-.tipos:before{
-  content: "";
-  position: fixed; /* para que cubra toda la pantalla aunque scrollees */
-  inset: 0;
-  background: rgba(0, 0, 0, 0.35); /* ajustá 0.25–0.45 */
-  pointer-events: none;
-  z-index: 0;
-}
-
 /* cards de productos con tamaño adecuado */
 .tipos__inner {
   position: relative;

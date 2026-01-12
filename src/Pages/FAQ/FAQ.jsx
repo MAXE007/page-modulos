@@ -71,52 +71,54 @@ export default function FAQ() {
   }, [waPhone]);
 
   return (
-    <section className="faqPage">
-      <div className="faqPage__container">
-        <header className="faqPage__header">
-          <h1 className="faqPage__title">Preguntas frecuentes</h1>
-          <p className="faqPage__subtitle">
-            Respuestas rápidas para que puedas avanzar con tu consulta sin vueltas.
-          </p>
-        </header>
+    <main className="page-bg">
+      <section className="faqPage">
+        <div className="faqPage__container">
+          <header className="faqPage__header">
+            <h1 className="faqPage__title">Preguntas frecuentes</h1>
+            <p className="faqPage__subtitle">
+              Respuestas rápidas para que puedas avanzar con tu consulta sin vueltas.
+            </p>
+          </header>
 
-        <div className="faqGlass">
-          {FAQS.map((item, i) => {
-            const open = openIndex === i;
-            return (
-              <div key={item.q} className={`faqItem ${open ? "is-open" : ""}`}>
-                <button
-                  type="button"
-                  className="faqItem__btn"
-                  onClick={() => setOpenIndex(open ? -1 : i)}
-                  aria-expanded={open}
-                >
-                  <span className="faqItem__q">{item.q}</span>
-                  <Chevron open={open} />
-                </button>
+          <div className="faqGlass">
+            {FAQS.map((item, i) => {
+              const open = openIndex === i;
+              return (
+                <div key={item.q} className={`faqItem ${open ? "is-open" : ""}`}>
+                  <button
+                    type="button"
+                    className="faqItem__btn"
+                    onClick={() => setOpenIndex(open ? -1 : i)}
+                    aria-expanded={open}
+                  >
+                    <span className="faqItem__q">{item.q}</span>
+                    <Chevron open={open} />
+                  </button>
 
-                <div className="faqItem__panel" role="region">
-                  <div className="faqItem__a">{item.a}</div>
+                  <div className="faqItem__panel" role="region">
+                    <div className="faqItem__a">{item.a}</div>
+                  </div>
                 </div>
-              </div>
-            );
-          })}
-        </div>
+              );
+            })}
+          </div>
 
-        <div className="faqPage__cta">
-          <p className="faqPage__ctaText">¿No encontraste tu respuesta?</p>
+          <div className="faqPage__cta">
+            <p className="faqPage__ctaText">¿No encontraste tu respuesta?</p>
 
-          {waHref ? (
-            <a className="faqPage__ctaBtn" href={waHref} target="_blank" rel="noreferrer">
-              Consultanos por WhatsApp
-            </a>
-          ) : (
-            <span className="faqPage__ctaHint">
-              Configurá <code>VITE_CONTACT_WA_PHONE</code> para habilitar WhatsApp.
-            </span>
-          )}
+            {waHref ? (
+              <a className="faqPage__ctaBtn" href={waHref} target="_blank" rel="noreferrer">
+                Consultanos por WhatsApp
+              </a>
+            ) : (
+              <span className="faqPage__ctaHint">
+                Configurá <code>VITE_CONTACT_WA_PHONE</code> para habilitar WhatsApp.
+              </span>
+            )}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
   );
 }

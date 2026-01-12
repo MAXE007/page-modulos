@@ -106,7 +106,7 @@ export default function ProductDetail() {
   }
 
   return (
-    <main className="pd">
+    <main className="pd page-bg">
       <div className="pd__container">
         <div className="pd__layout">
           {/* GALERÍA */}
@@ -176,7 +176,7 @@ export default function ProductDetail() {
                   onClick={() => changeImage(img)}
                   type="button"
                 >
-                  <img src={img} alt="miniatura" />
+                  <img src={img} alt="miniatura" loading="lazy" decoding="async" />
                 </button>
               ))}
             </div>

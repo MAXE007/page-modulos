@@ -4,7 +4,7 @@ import "./Products.css";
 
 export default function Products() {
   return (
-    <main className="tipos">
+    <main className="tipos page-bg">
       <div className="tipos__inner">
         <header className="tipos__head">
           <h1>Tipologías</h1>
