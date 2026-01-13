@@ -17,7 +17,7 @@ img { max-width: 100%; display: block; }
   position: relative;
   min-height: 100vh;
   padding-top: 64px;
-  background-image: url("/images/pinos.jpg"); /* mobile default */
+  isolation: isolate;
 }
 
 /* overlay para contraste */
@@ -25,7 +25,7 @@ img { max-width: 100%; display: block; }
   content:"";
   position: fixed;
   inset: 0;
-  z-index: 0;
+  z-index: -2;
   background-image: url("/images/pinos.jpg"); /* MOBILE */
   background-size: cover;
   background-repeat: no-repeat;
@@ -38,17 +38,11 @@ img { max-width: 100%; display: block; }
   content:"";
   position: fixed;
   inset: 0;
-  z-index: 0;
+  z-index: -1;
   pointer-events: none;
 
   /* clave para mobile: overlay más suave */
   background: rgba(0,0,0,0.22);
-}
-
-/* Asegura que el contenido quede arriba */
-.page-bg > *{
-  position: relative;
-  z-index: 1;
 }
 
 /* desktop */
