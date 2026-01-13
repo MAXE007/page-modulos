@@ -10,11 +10,13 @@ import ProductDetail from "./Pages/ProductDetail/ProductDetail";
 import FAQ from "./Pages/FAQ/FAQ";
 import Contact from "./Pages/Contact/Contact";
 import FloatingSocialButtons from "./components/FloatingSocialButtons/FloatingSocialButtons";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 
 export default function App() {
   return (
     <>
+      <ScrollToTop />
       <Navbar />
 
       <Routes>
