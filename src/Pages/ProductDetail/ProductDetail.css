@@ -302,7 +302,7 @@
 
 .pd__lightboxImg {
   width: 100%;
-  height: min(78vh, 720px);
+  height: min(72vh, 720px);
   object-fit: contain;
   display: block;
   background: #000;
