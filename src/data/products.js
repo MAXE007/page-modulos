@@ -19,8 +19,6 @@ export const PRODUCTS = [
       "Aberturas de aluminio",
       "Instalación eléctrica completa",
     ],
-
-    // ✅ NUEVO
     aboutTitle: "Sobre este módulo",
     aboutText:
       "Pensado para quienes necesitan un espacio funcional, rápido de instalar y con excelente aislación. Es ideal como oficina privada, monoambiente o módulo de apoyo en un terreno. Se entrega listo para usar, con instalación eléctrica completa y terminaciones prolijas.",
@@ -30,7 +28,11 @@ export const PRODUCTS = [
       { label: "Aislación", value: "Térmica y acústica" },
       { label: "Entrega", value: "Lista para habitar" },
       { label: "Hola", value: "jujuvsdvsdvdsvsdvsdvdsvds svsdvsdv sdvdsvsdvsdvsdv sdvsd fasfasfasfsa fasfas" },
+      { label: "Hola", value: "jujuvsdvsdvdsvsdvsdvdsvds svsdvsdv sdvdsvsdvsdvsdv sdvsd fasfasfasfsa fasfas" },
+      { label: "Hola", value: "jujuvsdvsdvdsvsdvsdvdsvds svsdvsdv sdvdsvsdvsdvsdv sdvsd fasfasfasfsa fasfas" },
     ],
+    model3d: null, // luego: "/models/mod-28.glb"
+    modelPoster: "/images/mod-28.jpg", // opcional, para placeholder
   },
   {
     id: "mod-28",
@@ -52,7 +54,6 @@ export const PRODUCTS = [
       "Terminaciones premium",
       "Opciones de personalización",
     ],
-    // ✅ NUEVO
     aboutTitle: "Sobre este módulo",
     aboutText:
       "Pensado para quienes necesitan un espacio funcional, rápido de instalar y con excelente aislación. Es ideal como oficina privada, monoambiente o módulo de apoyo en un terreno. Se entrega listo para usar, con instalación eléctrica completa y terminaciones prolijas.",
@@ -63,6 +64,8 @@ export const PRODUCTS = [
       { label: "Entrega", value: "Lista para habitar" },
       { label: "Hola", value: "jujuvsdvsdvdsvsdvsdvdsvds svsdvsdv sdvdsvsdvsdvsdv sdvsd fasfasfasfsa fasfas" },
     ],
+    model3d: null, // luego: "/models/mod-28.glb"
+    modelPoster: "/images/mod-28.jpg", // opcional, para placeholder
   },
   {
     id: "mod-36",
@@ -95,6 +98,8 @@ export const PRODUCTS = [
       { label: "Entrega", value: "Lista para habitar" },
       { label: "Hola", value: "jujuvsdvsdvdsvsdvsdvdsvds svsdvsdv sdvdsvsdvsdvsdv sdvsd fasfasfasfsa fasfas" },
     ],
+    model3d: null, // luego: "/models/mod-28.glb"
+    modelPoster: "/images/mod-28.jpg", // opcional, para placeholder
   },
   {
     id: "mod-48",
@@ -126,6 +131,9 @@ export const PRODUCTS = [
       { label: "Aislación", value: "Térmica y acústica" },
       { label: "Entrega", value: "Lista para habitar" },
       { label: "Hola", value: "jujuvsdvsdvdsvsdvsdvdsvds svsdvsdv sdvdsvsdvsdvsdv sdvsd fasfasfasfsa fasfas" },
+      { label: "Hola", value: "jujuvsdvsdvdsvsdvsdvdsvds svsdvsdv sdvdsvsdvsdvsdv sdvsd fasfasfasfsa fasfas" },
     ],
+    model3d: null, // luego: "/models/mod-28.glb"
+    modelPoster: "/images/mod-28.jpg", // opcional, para placeholder
   },
 ];

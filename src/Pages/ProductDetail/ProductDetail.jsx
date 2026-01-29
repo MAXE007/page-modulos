@@ -2,6 +2,8 @@ import { Link, useParams } from "react-router-dom";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { PRODUCTS } from "../../data/products";
 import "./ProductDetail.css";
+import Product3DViewer from "../../components/Product3DViewer/Product3DViewer";
+
 
 export default function ProductDetail() {
   const { id } = useParams();
@@ -237,6 +239,14 @@ export default function ProductDetail() {
           ) : null}
         </section>
         
+        <Product3DViewer
+          src={product.model3d}
+          poster={product.modelPoster || product.images?.[0]}
+          title="Recorrido 3D"
+          hint={product.model3d ? "Arrastrá para girar • Pinch para zoom" : "Próximamente: vista 3D del módulo"}
+        />
+
+
       </div>          
       {/* LIGHTBOX (con swipe adentro) */}
       {lightboxOpen && (

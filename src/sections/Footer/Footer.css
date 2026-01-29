@@ -66,18 +66,18 @@
   text-decoration: none;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.92);
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgb(194, 94, 36);
+  border: 1px solid rgb(128, 16, 103);
   transition: transform 160ms ease, background 160ms ease;
 }
 
 .footer__socialBtn:hover {
   transform: translateY(-1px);
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.24);
 }
 
 .footer__socialBtn--wa {
-  background: rgba(37, 211, 102, 0.20);
+  background: #2dc246;
   border-color: rgba(37, 211, 102, 0.28);
 }
 

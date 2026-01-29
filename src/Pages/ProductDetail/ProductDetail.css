@@ -77,7 +77,8 @@
 }
 
 .pd__cta {
-  background: #111;
+  background: #2dc246;
+  border-color: rgba(37, 211, 102, 0.28);
   color: #fff;
   padding: 12px 14px;
   border-radius: 12px;
