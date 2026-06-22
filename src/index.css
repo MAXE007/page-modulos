@@ -4,6 +4,10 @@
   color: #111;
 }
 
+.notranslate {
+  unicode-bidi: isolate;
+}
+
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { margin: 0; }

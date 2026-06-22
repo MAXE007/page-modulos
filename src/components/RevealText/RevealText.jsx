@@ -33,13 +33,21 @@ export default function RevealText({
       <span className="ltf__static">{text}</span>
 
       <span className="ltf__slot" ref={slotRef}>
-        <span key={index} className="ltf__word">
+        <span
+          key={index}
+          className="ltf__word notranslate"
+          translate="no"
+        >
           {words[index]}
         </span>
       </span>
 
       {/* elemento invisible SOLO para medir */}
-      <span className="ltf__measure" ref={measureRef}>
+      <span
+        className="ltf__measure notranslate"
+        ref={measureRef}
+        translate="no"
+      >
         {words[index]}
       </span>
     </h1>
