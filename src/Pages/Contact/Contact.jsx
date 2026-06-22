@@ -1,5 +1,5 @@
-// src/Pages/Contact/Contact.jsx
-import React, { useMemo, useState } from "react";
+import emailjs from "@emailjs/browser";
+import React, { useState } from "react";
 import "./Contact.css";
 
 export default function Contact() {
@@ -10,30 +10,47 @@ export default function Contact() {
     message: "",
   });
 
+  const [status, setStatus] = useState("");
+  const [sending, setSending] = useState(false);
+
   const onChange = (e) => {
     setForm((p) => ({ ...p, [e.target.name]: e.target.value }));
   };
 
-  const mailtoHref = useMemo(() => {
-    // Definí el correo destino en .env para no hardcodearlo
-    const to = import.meta.env.VITE_CONTACT_EMAIL;
-    if (!to) return null;
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-    const subject = `Consulta desde la web - ${form.name || "Sin nombre"}`;
-    const bodyLines = [
-      `Nombre: ${form.name || "-"}`,
-      `Email: ${form.email || "-"}`,
-      `Teléfono: ${form.phone || "-"}`,
-      "",
-      "Mensaje:",
-      form.message || "-",
-    ];
+    try {
+      setSending(true);
 
-    const body = bodyLines.join("\n");
-    return `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  }, [form]);
+      await emailjs.send(
+        "service_3pe142q",
+        "template_6zvbigi",
+        {
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          message: form.message,
+          time: new Date().toLocaleString("es-AR"),
+        },
+        "-4IaV_flYBz9Mxtt8"
+      );
 
-  const canSend = form.email.trim() && form.message.trim() && mailtoHref;
+      setStatus("success");
+
+      setForm({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error(error);
+      setStatus("error");
+    } finally {
+      setSending(false);
+    }
+  };
 
   return (
     <main className="page-bg">
@@ -42,16 +59,16 @@ export default function Contact() {
           <header className="contactPage__header">
             <h1 className="contactPage__title">Contacto</h1>
             <p className="contactPage__subtitle">
-              Contanos qué necesitás y te respondemos a la brevedad. También podés escribirnos por WhatsApp.
+              Contanos qué necesitás y te respondemos a la brevedad.
+              También podés escribirnos por WhatsApp.
             </p>
           </header>
 
           <div className="contactGrid">
-            {/* FORM */}
             <div className="contactGlass">
               <h2 className="contactGlass__title">Enviar consulta</h2>
 
-              <form className="contactForm" onSubmit={(e) => e.preventDefault()}>
+              <form className="contactForm" onSubmit={handleSubmit}>
                 <div className="contactRow">
                   <div className="field">
                     <div className="field__label">Nombre</div>
@@ -66,9 +83,7 @@ export default function Contact() {
                   </div>
 
                   <div className="field">
-                    <div className="field__label">
-                      Email <span className="contactReq"></span>
-                    </div>
+                    <div className="field__label">Email</div>
                     <input
                       className="contactInput"
                       name="email"
@@ -95,7 +110,7 @@ export default function Contact() {
                 </label>
 
                 <label className="contactLabel">
-                  Mensaje <span className="contactReq"></span>
+                  Mensaje
                   <textarea
                     className="contactTextarea"
                     name="message"
@@ -108,27 +123,29 @@ export default function Contact() {
                 </label>
 
                 <div className="contactActions">
-                  {mailtoHref ? (
-                    <button
-                      type="button"
-                      className={`contactBtn ${canSend ? "" : "is-disabled"}`}
-                      disabled={!canSend}
-                      onClick={() => {
-                        if (!mailtoHref) return;
-                        window.location.href = mailtoHref;
-                      }}
-                    >
-                      Enviar por correo
-                    </button>
-                  ) : (
-                    <div className="contactHint">
-                      Configurá <code>VITE_CONTACT_EMAIL</code> para habilitar el envío por correo.
-                    </div>
-                  )}
+                  <button
+                    type="submit"
+                    className="contactBtn"
+                    disabled={sending}
+                  >
+                    {sending ? "Enviando..." : "Enviar consulta"}
+                  </button>
                 </div>
+
+                {status === "success" && (
+                  <p className="contactSuccess">
+                    ✓ Consulta enviada correctamente.
+                  </p>
+                )}
+
+                {status === "error" && (
+                  <p className="contactError">
+                    ✕ Ocurrió un error al enviar la consulta.
+                  </p>
+                )}
+
                 <p className="contactSmall">
-                  * Este formulario abre tu cliente de correo y envía el mensaje directamente al equipo de FAST.
-                  Si preferís una respuesta inmediata, podés contactarnos por WhatsApp.
+                  Completá el formulario y nos pondremos en contacto a la brevedad.
                 </p>
               </form>
             </div>
