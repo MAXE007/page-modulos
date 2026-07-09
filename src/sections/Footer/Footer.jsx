@@ -61,7 +61,7 @@ export default function Footer() {
                   </svg>
                 </span>
                 <div>
-                  <span className="footer__value">tuemail@dominio.com</span>
+                  <span className="footer__value">fastconstructora@gmail.com</span>
                 </div>
               </div>
 
@@ -78,7 +78,7 @@ export default function Footer() {
                   </svg>
                 </span>
                 <div>
-                  <span className="footer__value">+54 9 2604 222639</span>
+                  <span className="footer__value">+54 2604222639</span>
                 </div>
               </div>
 
