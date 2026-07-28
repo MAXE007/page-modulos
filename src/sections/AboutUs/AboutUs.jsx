@@ -7,7 +7,7 @@ export default function AboutUs() {
 
         <div className="about__header">
           <span className="about__tag">
-            NUESTRA HISTORIA
+            NOSOTROS
           </span>
 
           <h2 className="about__title">
@@ -15,56 +15,73 @@ export default function AboutUs() {
           </h2>
 
           <p className="about__subtitle">
-            Construimos mucho más que módulos.
-            Creamos espacios pensados para las personas.
+            Conocé al equipo detrás de FAST y nuestra forma de trabajar para
+            crear espacios modernos, funcionales y listos para disfrutar.
           </p>
         </div>
 
         <div className="about__content">
 
-          <div className="about__imageWrapper">
-            <img
-              src="/images/portada.jpg"
-              alt="Equipo FAST"
-              className="about__image"
-            />
+          {/* Imagen */}
+          <div className="about__imageBlock">
+
+            <div className="about__imageWrapper">
+              <img
+                src="/images/aboutus.jpeg"
+                alt="Equipo de FAST Easy Modular"
+                className="about__image"
+              />
+            </div>
+
+            <p className="about__caption">
+              El equipo de <strong>FAST Easy Modular</strong> durante la entrega
+              de uno de nuestros proyectos.
+            </p>
+
           </div>
+
+          {/* Texto */}
 
           <div className="about__text">
 
             <p>
-              <strong>FAST Easy Modular</strong> nace con el objetivo de brindar
-              soluciones arquitectónicas modernas, funcionales y transportables,
-              adaptándose a las necesidades de cada cliente.
+              <strong>FAST Easy Modular</strong> es una empresa dedicada al
+              diseño, fabricación e instalación de módulos transportables,
+              ofreciendo soluciones modernas, funcionales y adaptadas a cada
+              proyecto.
             </p>
 
             <p>
-              Nos especializamos en el diseño y construcción de módulos
-              habitacionales, oficinas y espacios personalizados, priorizando la
-              calidad, la rapidez y la innovación en cada proyecto.
+              Nuestro equipo combina experiencia, compromiso y una forma de
+              trabajo enfocada en la calidad de cada detalle, acompañando al
+              cliente desde la primera idea hasta la entrega final del módulo.
             </p>
 
             <p>
-              Creemos que construir también significa acompañar a cada cliente
-              durante todo el proceso, ofreciendo soluciones prácticas, eficientes
-              y listas para disfrutar.
+              Creemos que construir también significa generar confianza. Por eso
+              trabajamos con procesos eficientes, materiales de primera calidad
+              y una atención personalizada que nos permite convertir cada
+              proyecto en una experiencia simple, rápida y segura.
             </p>
 
             <div className="about__values">
 
               <div className="about__value">
-                <span>🏗️</span>
-                <h4>Calidad</h4>
+                <span>👷</span>
+                <h4>Equipo profesional</h4>
+                <p>Comprometidos con cada proyecto.</p>
               </div>
 
               <div className="about__value">
-                <span>⚡</span>
-                <h4>Rapidez</h4>
+                <span>🏡</span>
+                <h4>Proyectos a medida</h4>
+                <p>Diseños adaptados a cada cliente.</p>
               </div>
 
               <div className="about__value">
-                <span>🤝</span>
-                <h4>Compromiso</h4>
+                <span>🚛</span>
+                <h4>Instalación en destino</h4>
+                <p>Entregas rápidas en todo el país.</p>
               </div>
 
             </div>
