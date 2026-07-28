@@ -24,16 +24,15 @@ export default function Contact() {
       setSending(true);
 
       await emailjs.send(
-        "service_3pe142q",
-        "template_6zvbigi",
+        "service_ow297uy",
+        "template_bgqqp18",
         {
           name: form.name,
           email: form.email,
           phone: form.phone,
           message: form.message,
-          time: new Date().toLocaleString("es-AR"),
         },
-        "-4IaV_flYBz9Mxtt8"
+        "CLtnkAudjL8Drdvrz"
       );
 
       setStatus("success");
