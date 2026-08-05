@@ -1,0 +1,324 @@
+.productPlan {
+  margin-top: 70px;
+  padding: 50px;
+  background: rgba(15, 15, 16, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+}
+
+.productPlan__header {
+  max-width: 720px;
+  margin-bottom: 35px;
+}
+
+.productPlan__eyebrow {
+  display: block;
+  margin-bottom: 10px;
+
+  color: #7c3aed;
+
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.productPlan__title {
+  margin: 0 0 12px;
+
+  color: #fff;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  line-height: 1.1;
+}
+
+.productPlan__subtitle {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* PLANO */
+
+.productPlan__imageWrap {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 500px;
+  padding: 30px;
+
+  overflow: hidden;
+
+  background: #f4f4f4;
+  border-radius: 22px;
+
+  cursor: zoom-in;
+}
+
+.productPlan__image {
+  display: block;
+
+  width: 100%;
+  max-width: 1000px;
+  max-height: 700px;
+
+  object-fit: contain;
+
+  transition: transform 0.4s ease;
+}
+
+.productPlan__imageWrap:hover .productPlan__image {
+  transform: scale(1.02);
+}
+
+/* BOTÓN VER COMPLETO */
+
+.productPlan__zoom {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 11px 16px;
+
+  color: #fff;
+  background: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(8px);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  pointer-events: none;
+}
+
+/* VIDEO */
+
+.productPlan__videoSection {
+  margin-top: 70px;
+  padding-top: 60px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.productPlan__videoWrap {
+  overflow: hidden;
+
+  background: #000;
+  border-radius: 22px;
+}
+
+.productPlan__video {
+  display: block;
+
+  width: 100%;
+  max-height: 720px;
+
+  background: #000;
+}
+
+/* ===========================
+   LIGHTBOX
+=========================== */
+
+.productPlan__lightbox{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:999999;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+
+    background:rgba(0,0,0,.65);
+
+    backdrop-filter:blur(14px);
+
+    -webkit-backdrop-filter:blur(14px);
+
+    animation:fadeIn .25s ease;
+
+}
+
+.productPlan__lightboxImage{
+
+    max-width:95vw;
+
+    max-height:90vh;
+
+    object-fit:contain;
+
+    border-radius:14px;
+
+    box-shadow:0 30px 80px rgba(0,0,0,.55);
+
+    animation:zoomIn .25s ease;
+
+}
+
+.productPlan__close{
+
+    position:fixed;
+
+    top:25px;
+
+    right:30px;
+
+    width:48px;
+
+    height:48px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(8px);
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.productPlan__close:hover{
+
+    background:rgba(255,255,255,.22);
+
+    transform:scale(1.08);
+
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .productPlan {
+    padding: 35px;
+    margin-top: 50px;
+  }
+
+  .productPlan__imageWrap {
+    min-height: 400px;
+    padding: 20px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .productPlan {
+    margin-top: 40px;
+    padding: 25px 18px;
+
+    border-radius: 22px;
+  }
+
+  .productPlan__header {
+    margin-bottom: 25px;
+  }
+
+  .productPlan__title {
+    font-size: 1.7rem;
+  }
+
+  .productPlan__subtitle {
+    font-size: 0.92rem;
+  }
+
+  .productPlan__imageWrap {
+    min-height: 300px;
+    padding: 12px;
+
+    border-radius: 16px;
+  }
+
+  .productPlan__zoom {
+    right: 12px;
+    bottom: 12px;
+
+    padding: 9px 13px;
+
+    font-size: 0.75rem;
+  }
+
+  .productPlan__videoSection {
+    margin-top: 50px;
+    padding-top: 45px;
+  }
+
+  .productPlan__videoWrap {
+    border-radius: 16px;
+  }
+
+  .productPlan__lightbox {
+    padding: 15px;
+  }
+
+  .productPlan__lightboxImage {
+    max-width: 100%;
+    max-height: 85vh;
+
+    border-radius: 10px;
+  }
+
+  .productPlan__close {
+    top: 15px;
+    right: 15px;
+  }
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+@keyframes zoomIn{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.95);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}

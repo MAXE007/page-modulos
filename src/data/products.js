@@ -1,139 +1,221 @@
 export const PRODUCTS = [
   {
-    id: "mod-19",
-    name: "Módulo 19,20 m²",
-    subtitle: "Ideal oficina / monoambiente",
-    m2: 19.2,
+    id: "natura",
+    name: "NATURA",
+    subtitle: "27 m²",
+    m2: 27,
+    bathroom: true,
     rooms: 1,
-    bathroom: true,
+    delivery: "Entrega inmediata",
+
+
+    images: [
+      "/images/tipologias/natura/portada.png",
+      "/images/tipologias/natura/exterior-1.png",
+      "/images/tipologias/natura/exterior-2.png",
+      "/images/tipologias/natura/exterior-3.png",
+      "/images/tipologias/natura/interior-1.png",
+      "/images/tipologias/natura/interior-2.png",
+      "/images/tipologias/natura/interior-3.png",
+      "/images/tipologias/natura/interior-4.png",
+      "/images/tipologias/natura/interior-5.png",
+      "/images/tipologias/natura/interior-6.png",
+    ],
+
+    plan: "/images/tipologias/natura/plano.png",
+
+    specs: [],
+
+    aboutTitle: "Sobre esta tipología",
+
+    aboutText:
+      "Tipología modular diseñada para brindar un espacio moderno, funcional y confortable. Su distribución optimiza cada metro cuadrado, ofreciendo ambientes luminosos y terminaciones de calidad.",
+
+    technical: [
+      { label: "Superficie", value: "27 m²" },
+    ],
+
+    video: null,
+  },
+
+  {
+    id: "terra",
+    name: "TERRA",
+    subtitle: "21 m²",
+    m2: 21,
+    bathroom: false,
+    rooms: 1,
     delivery: "Entrega inmediata",
     images: [
-      "/images/modulo 1.0.jpeg",
-      "/images/modulo 1.1.jpeg",
-      "/images/modulo 1.2.jpeg",
-      "/images/modulo 1.3.jpeg"
+      "/images/tipologias/terra/portada.png",
+      "/images/tipologias/terra/exterior-1.png",
+      "/images/tipologias/terra/exterior-2.png",
+      "/images/tipologias/terra/exterior-3.png",
+      "/images/tipologias/terra/interior-1.png",
+      "/images/tipologias/terra/interior-2.png",
+      "/images/tipologias/terra/interior-3.png",
+      "/images/tipologias/terra/interior-4.png",
+
     ],
-    specs: [
-      "Estructura metálica reforzada",
-      "Aislación térmica y acústica",
-      "Aberturas de aluminio",
-      "Instalación eléctrica completa",
-    ],
-    aboutTitle: "Sobre este módulo",
+
+    plan: "/images/tipologias/terra/plano.png",
+
+    specs: [],
+
+    aboutTitle: "Sobre esta tipología",
+
     aboutText:
-      "Pensado para quienes necesitan un espacio funcional, rápido de instalar y con excelente aislación. Es ideal como oficina privada, monoambiente o módulo de apoyo en un terreno. Se entrega listo para usar, con instalación eléctrica completa y terminaciones prolijas.",
-    highlights: [
-      { label: "Uso recomendado", value: "Oficina / monoambiente / anexo" },
-      { label: "Instalación", value: "Rápida, con mínima obra" },
-      { label: "Aislación", value: "Térmica y acústica" },
-      { label: "Entrega", value: "Lista para habitar" },
-      { label: "Hola", value: "jujuvsdvsdvdsvsdvsdvdsvds svsdvsdv sdvdsvsdvsdvsdv sdvsd fasfasfasfsa fasfas" },
-      { label: "Hola", value: "jujuvsdvsdvdsvsdvsdvdsvds svsdvsdv sdvdsvsdvsdvsdv sdvsd fasfasfasfsa fasfas" },
-      { label: "Hola", value: "jujuvsdvsdvdsvsdvsdvdsvds svsdvsdv sdvdsvsdvsdvsdv sdvsd fasfasfasfsa fasfas" },
+      "Tipología modular diseñada para brindar un espacio moderno, funcional y confortable. Su distribución optimiza cada metro cuadrado, ofreciendo ambientes luminosos y terminaciones de calidad.",
+
+    technical: [
+      { label: "Superficie", value: "21 m²" },
     ],
-    model3d: null, // luego: "/models/mod-28.glb"
-    modelPoster: "/images/mod-28.jpg", // opcional, para placeholder
+
+    video: null,
   },
+
   {
-    id: "mod-28",
-    name: "Módulo 28,56 m²",
-    subtitle: "Vivienda compacta",
-    m2: 28.56,
-    rooms: 2,
+    id: "galo",
+    name: "GALO",
+    subtitle: "28.80 m²",
+    m2: 28.8,
     bathroom: true,
+    rooms: 1,
     delivery: "Entrega inmediata",
+
     images: [
-      "/images/mod-28.jpg",
-      "/images/mod-28.jpg",
-      "/images/mod-28.jpg",
-      "/images/mod-19.jpg"
+      "/images/tipologias/galo/portada.png",
+      "/images/tipologias/galo/exterior-1.png",
+      "/images/tipologias/galo/exterior-2.png",
+      "/images/tipologias/galo/exterior-3.png",
+      "/images/tipologias/galo/interior-1.png",
+      "/images/tipologias/galo/interior-2.png",
+      "/images/tipologias/galo/interior-3.png",
+
     ],
-    specs: [
-      "Cocina integrada",
-      "Baño completo",
-      "Terminaciones premium",
-      "Opciones de personalización",
-    ],
-    aboutTitle: "Sobre este módulo",
+
+    plan: "/images/tipologias/galo/plano.png",
+
+    specs: [],
+
+    aboutTitle: "Sobre esta tipología",
+
     aboutText:
-      "Pensado para quienes necesitan un espacio funcional, rápido de instalar y con excelente aislación. Es ideal como oficina privada, monoambiente o módulo de apoyo en un terreno. Se entrega listo para usar, con instalación eléctrica completa y terminaciones prolijas.",
-    highlights: [
-      { label: "Uso recomendado", value: "Oficina / monoambiente / anexo" },
-      { label: "Instalación", value: "Rápida, con mínima obra" },
-      { label: "Aislación", value: "Térmica y acústica" },
-      { label: "Entrega", value: "Lista para habitar" },
-      { label: "Hola", value: "jujuvsdvsdvdsvsdvsdvdsvds svsdvsdv sdvdsvsdvsdvsdv sdvsd fasfasfasfsa fasfas" },
+      "Tipología modular diseñada para brindar un espacio moderno, funcional y confortable. Su distribución optimiza cada metro cuadrado, ofreciendo ambientes luminosos y terminaciones de calidad.",
+
+    technical: [
+      { label: "Superficie", value: "28.80 m²" },
     ],
-    model3d: null, // luego: "/models/mod-28.glb"
-    modelPoster: "/images/mod-28.jpg", // opcional, para placeholder
+
+    video: null,
   },
+
   {
-    id: "mod-36",
-    name: "Módulo 36 m²",
-    subtitle: "1 dormitorio + estar",
-    m2: 36,
-    rooms: 3,
+    id: "nortland",
+    name: "NORTLAND",
+    subtitle: "32.20 m²",
+    m2: 32.2,
     bathroom: true,
-    delivery: "A pedido (30–45 días)",
+    rooms: 1,
+    delivery: "Entrega inmediata",
+
     images: [
-      "/images/mod-36.jpg",
-      "/images/mod-36.jpg",
-      "/images/mod-36.jpg",
-      "/images/mod-28.jpg"
+      "/images/tipologias/nortland/portada.png",
+      "/images/tipologias/nortland/exterior-1.png",
+      "/images/tipologias/nortland/exterior-2.png",
+      "/images/tipologias/nortland/interior-1.png",
+      "/images/tipologias/nortland/interior-2.png",
+      "/images/tipologias/nortland/interior-3.png",
+      "/images/tipologias/nortland/interior-4.png",
+
     ],
-    specs: [
-      "Distribución funcional",
-      "Mayor superficie útil",
-      "Terminaciones premium",
-      "Personalizable por catálogo",
-    ],
-    // ✅ NUEVO
-    aboutTitle: "Sobre este módulo",
+
+    plan: "/images/tipologias/nortland/plano.png",
+
+    specs: [],
+
+    aboutTitle: "Sobre esta tipología",
+
     aboutText:
-      "Pensado para quienes necesitan un espacio funcional, rápido de instalar y con excelente aislación. Es ideal como oficina privada, monoambiente o módulo de apoyo en un terreno. Se entrega listo para usar, con instalación eléctrica completa y terminaciones prolijas.",
-    highlights: [
-      { label: "Uso recomendado", value: "Oficina / monoambiente / anexo" },
-      { label: "Instalación", value: "Rápida, con mínima obra" },
-      { label: "Aislación", value: "Térmica y acústica" },
-      { label: "Entrega", value: "Lista para habitar" },
-      { label: "Hola", value: "jujuvsdvsdvdsvsdvsdvdsvds svsdvsdv sdvdsvsdvsdvsdv sdvsd fasfasfasfsa fasfas" },
+      "Tipología modular diseñada para brindar un espacio moderno, funcional y confortable. Su distribución optimiza cada metro cuadrado, ofreciendo ambientes luminosos y terminaciones de calidad.",
+
+    technical: [
+      { label: "Superficie", value: "32.20 m²" },
     ],
-    model3d: null, // luego: "/models/mod-28.glb"
-    modelPoster: "/images/mod-28.jpg", // opcional, para placeholder
+
+    video: null,
   },
+
   {
-    id: "mod-48",
-    name: "Módulo 48 m²",
-    subtitle: "Familiar / vivienda completa",
-    m2: 48,
-    rooms: 4,
+    id: "pampa",
+    name: "PAMPA",
+    subtitle: "41.80 m²",
+    m2: 41.8,
     bathroom: true,
-    delivery: "A pedido (45–60 días)",
+    rooms: 1,
+    delivery: "Entrega inmediata",
+
     images: [
-      "/images/mod-48.jpg",
-      "/images/mod-48.jpg",
-      "/images/mod-48.jpg",
-      "/images/mod-28.jpg"
+      "/images/tipologias/pampa/portada.png",
+      "/images/tipologias/pampa/exterior-1.png",
+      "/images/tipologias/pampa/exterior-2.png",
+      "/images/tipologias/pampa/exterior-3.png",
+      "/images/tipologias/pampa/interior-1.png",
+      "/images/tipologias/pampa/interior-2.png",
+      "/images/tipologias/pampa/interior-3.png",
+
     ],
-    specs: [
-      "Espacios amplios",
-      "Opciones 1 o 2 dormitorios",
-      "Aislación reforzada",
-      "Preparado para base/platea",
-    ],
-    // ✅ NUEVO
-    aboutTitle: "Sobre este módulo",
+
+    plan: "/images/tipologias/pampa/plano.png",
+
+    specs: [],
+
+    aboutTitle: "Sobre esta tipología",
+
     aboutText:
-      "Pensado para quienes necesitan un espacio funcional, rápido de instalar y con excelente aislación. Es ideal como oficina privada, monoambiente o módulo de apoyo en un terreno. Se entrega listo para usar, con instalación eléctrica completa y terminaciones prolijas.",
-    highlights: [
-      { label: "Uso recomendado", value: "Oficina / monoambiente / anexo" },
-      { label: "Instalación", value: "Rápida, con mínima obra" },
-      { label: "Aislación", value: "Térmica y acústica" },
-      { label: "Entrega", value: "Lista para habitar" },
-      { label: "Hola", value: "jujuvsdvsdvdsvsdvsdvdsvds svsdvsdv sdvdsvsdvsdvsdv sdvsd fasfasfasfsa fasfas" },
-      { label: "Hola", value: "jujuvsdvsdvdsvsdvsdvdsvds svsdvsdv sdvdsvsdvsdvsdv sdvsd fasfasfasfsa fasfas" },
+      "Tipología modular diseñada para brindar un espacio moderno, funcional y confortable. Su distribución optimiza cada metro cuadrado, ofreciendo ambientes luminosos y terminaciones de calidad.",
+
+    technical: [
+      { label: "Superficie", value: "41.80 m²" },
     ],
-    model3d: null, // luego: "/models/mod-28.glb"
-    modelPoster: "/images/mod-28.jpg", // opcional, para placeholder
+
+    video: null,
+  },
+
+  {
+    id: "moka",
+    name: "MOKA",
+    subtitle: "43.20 m²",
+    m2: 43.2,
+    bathroom: true,
+    rooms: 1,
+    delivery: "Entrega inmediata",
+
+
+    images: [
+      "/images/tipologias/moka/portada.png",
+      "/images/tipologias/moka/exterior-1.png",
+      "/images/tipologias/moka/exterior-2.png",
+      "/images/tipologias/moka/exterior-3.png",
+      "/images/tipologias/moka/interior-1.png",
+      "/images/tipologias/moka/interior-2.png",
+      "/images/tipologias/moka/interior-3.png",
+
+    ],
+
+    plan: "/images/tipologias/moka/plano.png",
+
+    specs: [],
+
+    aboutTitle: "Sobre esta tipología",
+
+    aboutText:
+      "Tipología modular diseñada para brindar un espacio moderno, funcional y confortable. Su distribución optimiza cada metro cuadrado, ofreciendo ambientes luminosos y terminaciones de calidad.",
+
+    technical: [
+      { label: "Superficie", value: "43.20 m²" },
+    ],
+
+    video: null,
   },
 ];

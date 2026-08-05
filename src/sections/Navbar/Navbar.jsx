@@ -46,7 +46,7 @@ export default function Navbar() {
 
           <nav className="nav__links" aria-label="Navegación principal">
             <NavLink to="/tipologias" className="nav__link">
-              Productos
+              Tipologías
             </NavLink>
             <NavLink to="/faq" className="nav__link">
               Preguntas Frecuentes
@@ -75,7 +75,7 @@ export default function Navbar() {
             Inicio
           </NavLink>
           <NavLink to="/tipologias" className="nav__mobileLink">
-            Productos
+            Tipologías
           </NavLink>
           <NavLink to="/faq" className="nav__mobileLink">
             Preguntas Frecuentes

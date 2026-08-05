@@ -2,7 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { PRODUCTS } from "../../data/products";
 import "./ProductDetail.css";
-import Product3DViewer from "../../components/Product3DViewer/Product3DViewer";
+import ProductPlan from "../../components/ProductPlan/ProductPlan";
 
 
 export default function ProductDetail() {
@@ -239,11 +239,10 @@ export default function ProductDetail() {
           ) : null}
         </section>
         
-        <Product3DViewer
-          src={product.model3d}
-          poster={product.modelPoster || product.images?.[0]}
-          title="Recorrido 3D"
-          hint={product.model3d ? "Arrastrá para girar • Pinch para zoom" : "Próximamente: vista 3D del módulo"}
+        <ProductPlan
+          plan={product.plan}
+          video={product.video}
+          title={`Plano de ${product.name}`}
         />
 
 
