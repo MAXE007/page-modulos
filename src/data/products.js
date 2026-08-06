@@ -24,12 +24,12 @@ export const PRODUCTS = [
 
     plan: "/images/tipologias/natura/plano.png",
 
-    specs: [],
+    specs: ["Chapa sinusoidal"],
 
     aboutTitle: "Sobre esta tipología",
 
     aboutText:
-      "Tipología modular diseñada para brindar un espacio moderno, funcional y confortable. Su distribución optimiza cada metro cuadrado, ofreciendo ambientes luminosos y terminaciones de calidad.",
+      "",
 
     technical: [
       { label: "Superficie", value: "27 m²" },
@@ -60,12 +60,12 @@ export const PRODUCTS = [
 
     plan: "/images/tipologias/terra/plano.png",
 
-    specs: [],
+    specs: ["Pisos PVC/SPC: Piso flotante/vinílico simil madera", "Placas de yeso en cielorraso y paredes", "Aberturas de aluminio: Línea Modena o superiores", "Chapa sinusoidal", "Revestimiento Cerámico: En piso y paredes"],
 
     aboutTitle: "Sobre esta tipología",
 
     aboutText:
-      "Tipología modular diseñada para brindar un espacio moderno, funcional y confortable. Su distribución optimiza cada metro cuadrado, ofreciendo ambientes luminosos y terminaciones de calidad.",
+      "Este modelo cuenta con un espacio de esparcimiento común para los usuarios, siendo un monoambiente que tiene al dormitorio como protagonista, sin relegar la existencia de una kitchennette y un baño completo; contando también con un espacio semi cubierto. Todo esto, distribuido en sus 21 m2. Interior 100% personalizabe y 100% transportable acualquier sitio del pais.",
 
     technical: [
       { label: "Superficie", value: "21 m²" },
@@ -80,7 +80,7 @@ export const PRODUCTS = [
     subtitle: "28.80 m²",
     m2: 28.8,
     bathroom: true,
-    rooms: 1,
+    rooms: 2,
     delivery: "Entrega inmediata",
 
     images: [
@@ -116,7 +116,7 @@ export const PRODUCTS = [
     subtitle: "32.20 m²",
     m2: 32.2,
     bathroom: true,
-    rooms: 1,
+    rooms: 3,
     delivery: "Entrega inmediata",
 
     images: [
@@ -152,7 +152,7 @@ export const PRODUCTS = [
     subtitle: "41.80 m²",
     m2: 41.8,
     bathroom: true,
-    rooms: 1,
+    rooms: 2,
     delivery: "Entrega inmediata",
 
     images: [
@@ -188,7 +188,7 @@ export const PRODUCTS = [
     subtitle: "43.20 m²",
     m2: 43.2,
     bathroom: true,
-    rooms: 1,
+    rooms: 3,
     delivery: "Entrega inmediata",
 
 
