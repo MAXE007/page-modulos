@@ -29,7 +29,7 @@ export default function ProjectsCarousel() {
 
   return (
     <section className="carousel">
-      <h2 className="carousel__title">Nuestros proyectos</h2>
+      <h2 className="carousel__title">Nuestros mejores proyectos</h2>
 
       <div className="carousel__viewport">
         {PROJECTS.map((p, i) => {

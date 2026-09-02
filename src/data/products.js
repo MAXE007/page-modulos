@@ -60,7 +60,7 @@ export const PRODUCTS = [
 
     plan: "/images/tipologias/terra/plano.png",
 
-    specs: ["Pisos PVC/SPC: Piso flotante/vinílico simil madera", "Placas de yeso en cielorraso y paredes", "Aberturas de aluminio: Línea Modena o superiores", "Chapa sinusoidal", "Revestimiento Cerámico: En piso y paredes"],
+    specs: ["Estructura base metalica", "Aislamiento de poliuretano expandido","Aberturas de aluminio D.V.H","Mobiliario de cocina en melamina (colores a eleccion)" ,"Mesada de granito","Griferias Piazza","Artefactos sanitarios Piazza","Doble piso en OSB 18mm", "Doble emplacado en paredes","Pisos PVC/SPC: Piso flotante/vinílico simil madera", "Cielorraso de PVC/Placas de Yeso"],
 
     aboutTitle: "Sobre esta tipología",
 

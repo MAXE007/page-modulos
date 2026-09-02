@@ -1,0 +1,240 @@
+.lines {
+  min-height: 100vh;
+  padding: 150px 20px 100px;
+  color: white;
+}
+
+.lines__inner {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.lines__head {
+  max-width: 750px;
+  margin: 0 auto 80px;
+  text-align: center;
+}
+
+.lines__tag {
+  display: inline-block;
+  margin-top: 25px;
+  margin-bottom: 16px;
+
+  color: #7c3aed;
+
+  font-size: .78rem;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.lines__title {
+  margin: 0 0 18px;
+
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+}
+
+.lines__subtitle {
+  max-width: 650px;
+  margin: 0 auto;
+
+  color: rgba(255,255,255,.68);
+
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.lines__grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 28px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.lineCard {
+  overflow: hidden;
+
+  background: rgba(255,255,255,.035);
+
+  border: 1px solid rgba(255,255,255,.08);
+
+  border-radius: 24px;
+
+  margin: 24px;
+
+  transition:
+    transform .35s ease,
+    border-color .35s ease,
+    box-shadow .35s ease;
+}
+
+
+.lineCard:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(124,58,237,.55);
+
+  box-shadow: 0 25px 60px rgba(0,0,0,.3);
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.lineCard__imageWrapper {
+  position: relative;
+
+  height: 300px;
+
+  overflow: hidden;
+}
+
+.lineCard__image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform .6s ease;
+}
+
+.lineCard:hover .lineCard__image {
+  transform: scale(1.05);
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.lineCard__content {
+  padding: 28px;
+}
+
+.lineCard__eyebrow {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #7c3aed;
+
+  font-size: .72rem;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.lineCard__title {
+  margin: 0 0 8px;
+
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.lineCard__subtitle {
+  margin: 0 0 18px;
+
+  color: rgba(255,255,255,.75);
+
+  font-size: .95rem;
+}
+
+.lineCard__description {
+  margin: 0;
+
+  color: rgba(255,255,255,.62);
+
+  font-size: .92rem;
+
+  line-height: 1.7;
+}
+
+
+/* =========================
+   FOOTER / BUTTON
+========================= */
+
+.lineCard__footer {
+  margin-top: 28px;
+
+  padding-top: 22px;
+
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.lineCard__button {
+  display: inline-flex;
+
+  align-items: center;
+  gap: 10px;
+
+  color: white;
+
+  font-size: .9rem;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: gap .25s ease;
+}
+
+.lineCard__button span {
+  font-size: 1.2rem;
+}
+
+.lineCard__button:hover {
+  gap: 15px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+  .lines__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+  .lines {
+    padding: 120px 18px 80px;
+  }
+
+  .lines__head {
+    margin-bottom: 50px;
+  }
+
+  .lines__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lineCard__imageWrapper {
+    height: 260px;
+  }
+
+}

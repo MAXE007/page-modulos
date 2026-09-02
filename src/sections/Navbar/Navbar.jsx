@@ -5,27 +5,34 @@ import "./Navbar.css";
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [tipologiasOpen, setTipologiasOpen] = useState(false);
+
   const location = useLocation();
 
   const isHome = location.pathname === "/";
-  const solid = !isHome || scrolled; // en páginas internas siempre sólido
+  const solid = !isHome || scrolled;
 
   // cerrar menú mobile al navegar
   useEffect(() => {
     setOpen(false);
+    setTipologiasOpen(false);
   }, [location.pathname]);
 
   // detectar scroll
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
+
     onScroll();
+
     window.addEventListener("scroll", onScroll, { passive: true });
+
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // ✅ bloquear scroll del body cuando el menú está abierto
+  // bloquear scroll del body cuando el menú mobile está abierto
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
+
     return () => {
       document.body.style.overflow = "";
     };
@@ -33,9 +40,19 @@ export default function Navbar() {
 
   return (
     <>
-      <header className={`nav ${solid ? "nav--scrolled" : ""} ${open ? "nav--open" : ""}`}>
+      <header
+        className={`nav ${solid ? "nav--scrolled" : ""} ${
+          open ? "nav--open" : ""
+        }`}
+      >
         <div className="nav__inner">
-          <NavLink to="/" className="nav__brand" aria-label="Ir al inicio">
+
+          {/* LOGO */}
+          <NavLink
+            to="/"
+            className="nav__brand"
+            aria-label="Ir al inicio"
+          >
             <img
               src="/images/logo.png"
               alt="FAST"
@@ -44,50 +61,209 @@ export default function Navbar() {
             />
           </NavLink>
 
-          <nav className="nav__links" aria-label="Navegación principal">
-            <NavLink to="/tipologias" className="nav__link">
-              Tipologías
-            </NavLink>
-            <NavLink to="/faq" className="nav__link">
+
+          {/* DESKTOP */}
+          <nav
+            className="nav__links"
+            aria-label="Navegación principal"
+          >
+
+            {/* TIPOLOGÍAS DROPDOWN */}
+            <div
+              className="nav__dropdown"
+              onMouseEnter={() => setTipologiasOpen(true)}
+              onMouseLeave={() => setTipologiasOpen(false)}
+            >
+
+              <button
+                type="button"
+                className="nav__link nav__dropdownTrigger"
+                onClick={() =>
+                  setTipologiasOpen((value) => !value)
+                }
+                aria-expanded={tipologiasOpen}
+              >
+                Tipologías
+                <span
+                  className={`nav__chevron ${
+                    tipologiasOpen ? "is-open" : ""
+                  }`}
+                >
+                  ▾
+                </span>
+              </button>
+
+
+              <div
+                className={`nav__dropdownMenu ${
+                  tipologiasOpen
+                    ? "nav__dropdownMenu--open"
+                    : ""
+                }`}
+              >
+
+                <NavLink
+                  to="/tipologias"
+                  className="nav__dropdownItem"
+                >
+                  <span className="nav__dropdownItemTitle">
+                    Modelos
+                  </span>
+
+                  <span className="nav__dropdownItemDescription">
+                    Conocé nuestras tipologías
+                  </span>
+                </NavLink>
+
+
+                <NavLink
+                  to="/tipologias/lineas"
+                  className="nav__dropdownItem"
+                >
+                  <span className="nav__dropdownItemTitle">
+                    Líneas
+                  </span>
+
+                  <span className="nav__dropdownItemDescription">
+                    Elegí materiales y estilos
+                  </span>
+                </NavLink>
+
+              </div>
+
+            </div>
+
+
+            {/* FAQ */}
+            <NavLink
+              to="/faq"
+              className="nav__link"
+            >
               Preguntas Frecuentes
             </NavLink>
-            <NavLink to="/contacto" className="nav__link">
+
+
+            {/* CONTACTO */}
+            <NavLink
+              to="/contacto"
+              className="nav__link"
+            >
               Contacto
             </NavLink>
+
           </nav>
 
+
+          {/* BURGER MOBILE */}
           <button
             className="nav__burger"
             type="button"
-            aria-label={open ? "Cerrar menú" : "Abrir menú"}
+            aria-label={
+              open ? "Cerrar menú" : "Abrir menú"
+            }
             aria-expanded={open}
-            onClick={() => setOpen((v) => !v)}
+            onClick={() => setOpen((value) => !value)}
           >
             <span />
             <span />
             <span />
           </button>
+
         </div>
 
-        {/* Mobile menu */}
-        <div className={`nav__mobile ${open ? "nav__mobile--open" : ""}`}>
-          <NavLink to="/" className="nav__mobileLink">
+
+        {/* MOBILE MENU */}
+        <div
+          className={`nav__mobile ${
+            open ? "nav__mobile--open" : ""
+          }`}
+        >
+
+          <NavLink
+            to="/"
+            className="nav__mobileLink"
+          >
             Inicio
           </NavLink>
-          <NavLink to="/tipologias" className="nav__mobileLink">
-            Tipologías
-          </NavLink>
-          <NavLink to="/faq" className="nav__mobileLink">
+
+
+          {/* MOBILE TIPOLOGÍAS */}
+          <div className="nav__mobileDropdown">
+
+            <button
+              type="button"
+              className="nav__mobileLink nav__mobileDropdownTrigger"
+              onClick={() =>
+                setTipologiasOpen((value) => !value)
+              }
+              aria-expanded={tipologiasOpen}
+            >
+              <span>Tipologías</span>
+
+              <span
+                className={`nav__mobileChevron ${
+                  tipologiasOpen ? "is-open" : ""
+                }`}
+              >
+                ▾
+              </span>
+            </button>
+
+
+            <div
+              className={`nav__mobileSubmenu ${
+                tipologiasOpen
+                  ? "nav__mobileSubmenu--open"
+                  : ""
+              }`}
+            >
+
+              <NavLink
+                to="/tipologias"
+                className="nav__mobileSubLink"
+              >
+                Modelos
+              </NavLink>
+
+              <NavLink
+                to="/tipologias/lineas"
+                className="nav__mobileSubLink"
+              >
+                Líneas
+              </NavLink>
+
+            </div>
+
+          </div>
+
+
+          <NavLink
+            to="/faq"
+            className="nav__mobileLink"
+          >
             Preguntas Frecuentes
           </NavLink>
-          <NavLink to="/contacto" className="nav__mobileLink">
+
+
+          <NavLink
+            to="/contacto"
+            className="nav__mobileLink"
+          >
             Contacto
           </NavLink>
+
         </div>
+
       </header>
 
-      {/* ✅ Overlay: asegura contraste en cualquier sección */}
-      {open && <div className="nav__overlay" onClick={() => setOpen(false)} />}
+
+      {/* OVERLAY MOBILE */}
+      {open && (
+        <div
+          className="nav__overlay"
+          onClick={() => setOpen(false)}
+        />
+      )}
     </>
   );
 }
