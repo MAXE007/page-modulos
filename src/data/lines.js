@@ -3,7 +3,7 @@ export const LINES = [
     id: "linea-1",
     name: "Start",
     subtitle: "Simple,práctica y funcional",
-    image: "/images/lineas/linea-1.jpg",
+    image: "/images/madera.jpg",
 
     description:
       "Una solución práctica y eficiente, pensada para responder a las necesidades fundamentales de cada proyecto con la calidad y funcionalidad de FAST.",
@@ -25,7 +25,7 @@ export const LINES = [
     id: "linea-2",
     name: "Essential",
     subtitle: "Todo lo escencial bien resuelto",
-    image: "/images/lineas/linea-2.jpg",
+    image: "/images/modulo 1.0.jpeg",
 
     description:
       "Todo lo necesario para disfrutar de un módulo funcional, confortable y bien resuelto, con una selección equilibrada de materiales y equipamiento.",

@@ -9,7 +9,7 @@ export default function LineDetail() {
 
   if (!line) {
     return (
-      <main className="line-detail line-detail--notFound">
+      <main className="line-detail page-bg">
         <div className="line-detail__card line-detail__notFound">
           <span>LÍNEA</span>
           <h1>Línea no encontrada</h1>
@@ -24,7 +24,7 @@ export default function LineDetail() {
   }
 
   return (
-    <main className="line-detail">
+    <main className="line-detail page-bg">
       {/* HERO */}
       <section className="line-detail__card line-detail__hero">
         {line.image && (
