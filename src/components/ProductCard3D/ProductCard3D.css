@@ -122,6 +122,11 @@
   font-weight: 900;
   cursor: pointer;
 }
+.pc__more:hover {
+  background: rgba(94, 50, 189, 0.521);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
 
 .pc__actions,
 .pc__more {

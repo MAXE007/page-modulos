@@ -8,10 +8,6 @@ export default function Lines() {
       <div className="lines__inner">
 
         <header className="lines__head">
-          <span className="lines__tag">
-            ESTILOS Y TERMINACIONES
-          </span>
-
           <h1 className="lines__title">
             Líneas
           </h1>

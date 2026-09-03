@@ -7,6 +7,7 @@
 .lines__inner {
   max-width: 1300px;
   margin: 0 auto;
+  padding: 28px 16px 50px;
 }
 
 .lines__head {
@@ -15,32 +16,17 @@
   text-align: center;
 }
 
-.lines__tag {
-  display: inline-block;
-  margin-top: 25px;
-  margin-bottom: 16px;
-
-  color: #7c3aed;
-
-  font-size: .78rem;
-  font-weight: 700;
-
-  letter-spacing: 2px;
-}
 
 .lines__title {
-  margin: 0 0 18px;
-
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin: 18px;
+  font-size: 54px;
   font-weight: 700;
 }
 
 .lines__subtitle {
   max-width: 650px;
   margin: 0 auto;
-
   color: rgba(255,255,255,.68);
-
   font-size: 1.05rem;
   line-height: 1.8;
 }
@@ -48,7 +34,7 @@
 
 /* =========================
    GRID
-========================= */
+========================= */ 
 
 .lines__grid {
   display: grid;
@@ -66,7 +52,7 @@
 .lineCard {
   overflow: hidden;
 
-  background: rgba(255,255,255,.035);
+  background: rgba(15, 15, 16, 0.72);
 
   border: 1px solid rgba(255,255,255,.08);
 
@@ -128,9 +114,7 @@
   display: block;
 
   margin-bottom: 10px;
-
-  color: #7c3aed;
-
+  color: rgb(94, 50, 189);
   font-size: .72rem;
   font-weight: 700;
 
@@ -139,7 +123,6 @@
 
 .lineCard__title {
   margin: 0 0 8px;
-
   font-size: 1.7rem;
   font-weight: 700;
 }
@@ -147,7 +130,7 @@
 .lineCard__subtitle {
   margin: 0 0 18px;
 
-  color: rgba(255,255,255,.75);
+  color: rgba(255, 255, 255, 0.836);
 
   font-size: .95rem;
 }
@@ -155,7 +138,7 @@
 .lineCard__description {
   margin: 0;
 
-  color: rgba(255,255,255,.62);
+  color: rgba(255,255,255,.836);
 
   font-size: .92rem;
 
@@ -196,6 +179,7 @@
 }
 
 .lineCard__button:hover {
+  color: rgb(94, 50, 189);
   gap: 15px;
 }
 

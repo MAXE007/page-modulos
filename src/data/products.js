@@ -43,7 +43,7 @@ export const PRODUCTS = [
     name: "TERRA",
     subtitle: "21 m²",
     m2: 21,
-    bathroom: false,
+    bathroom: true,
     rooms: 1,
     delivery: "Entrega inmediata",
     images: [

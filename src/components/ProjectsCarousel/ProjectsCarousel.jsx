@@ -4,15 +4,15 @@ import "./ProjectsCarousel.css";
 const PROJECTS = [
   {
     title: "Gente",
-    image: "/images/vet.jpg",
+    image: "/images/proyecto1.jpeg",
   },
   {
     title: "Veterinaria",
-    image: "/images/veterinaria.jpg",
+    image: "/images/proyecto2.jpeg",
   },
   {
     title: "Inauguración",
-    image: "/images/people.jpg",
+    image: "/images/proyecto3.jpeg",
   },
 ];
 
@@ -51,7 +51,6 @@ export default function ProjectsCarousel() {
               }}
             >
               <img src={p.image} alt={p.title} />
-              <h3>{p.title}</h3>
             </article>
           );
         })}

@@ -72,7 +72,7 @@
   border-radius: 999px;
   border: none;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 28px;
   color: #ffffff;
   background: rgba(0, 0, 0, 0.541);
   transition: background 200ms ease, transform 200ms ease;
@@ -80,8 +80,10 @@
 }
 
 .carousel__controls button:hover {
-  background: rgba(255, 255, 255, 0.397);
+  background: rgba(94, 50, 189, 0.521);
+
   transform: translateY(-2px);
+
 }
 
 /* MOBILE */
