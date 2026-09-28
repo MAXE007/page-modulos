@@ -57,7 +57,8 @@
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
-  margin-top: 18px;
+  margin-top: auto;
+  padding-top: 18px;
 }
 
 .pd__cta {
@@ -244,6 +245,8 @@
   padding: 22px 22px 26px;
   color: rgba(255, 255, 255, 0.92);
   box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
 }
 
 .pd__title { color: #fff; }

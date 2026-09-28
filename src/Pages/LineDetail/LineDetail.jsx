@@ -7,22 +7,6 @@ export default function LineDetail() {
 
   const line = LINES.find((item) => item.id === id);
 
-  if (!line) {
-    return (
-      <main className="line-detail page-bg">
-        <div className="line-detail__card line-detail__notFound">
-          <span>LÍNEA</span>
-          <h1>Línea no encontrada</h1>
-          <p>La línea que estás buscando no existe.</p>
-
-          <Link to="/tipologias/lineas" className="line-detail__back">
-            ← Volver a líneas
-          </Link>
-        </div>
-      </main>
-    );
-  }
-
   return (
     <main className="line-detail page-bg">
       {/* HERO */}
@@ -36,10 +20,6 @@ export default function LineDetail() {
         )}
 
         <div className="line-detail__heroContent">
-          <Link to="/tipologias/lineas" className="line-detail__back">
-            ← Volver a líneas
-          </Link>
-
           <div className="line-detail__label">LÍNEA</div>
 
           <h1>{line.name}</h1>
@@ -75,7 +55,7 @@ export default function LineDetail() {
             <div className="line-detail__list">
               {line.materials.map((material, index) => (
                 <div className="line-detail__item" key={`${material}-${index}`}>
-                  <span className="line-detail__number">0{index + 1}</span>
+                  <span className="line-detail__number">{index + 1}</span>
                   <span>{material}</span>
                 </div>
               ))}
@@ -88,7 +68,7 @@ export default function LineDetail() {
             <div className="line-detail__list">
               {line.styles.map((style, index) => (
                 <div className="line-detail__item" key={`${style}-${index}`}>
-                  <span className="line-detail__number">0{index + 1}</span>
+                  <span className="line-detail__number">{index + 1}</span>
                   <span>{style}</span>
                 </div>
               ))}
