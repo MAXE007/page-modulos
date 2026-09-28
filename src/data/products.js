@@ -2,13 +2,12 @@ export const PRODUCTS = [
   {
     id: "natura",
     name: "NATURA",
-    subtitle: "27 m²",
-    m2: 27,
-    bathroom: true,
-    rooms: 1,
-    delivery: "Entrega inmediata",
-
-
+    linePrices: {
+    "Start": "USD $ 19.800 (+ IVA)",
+    "Essential": "USD $ 27.000 (+ IVA)",
+    "Select": "USD $ 30.000 (+ IVA)",
+    "Signature": "USD $ 45.600 (+ IVA)",
+    },
     images: [
       "/images/tipologias/natura/portada.png",
       "/images/tipologias/natura/exterior-1.png",
@@ -24,7 +23,7 @@ export const PRODUCTS = [
 
     plan: "/images/tipologias/natura/plano.png",
 
-    specs: ["Chapa sinusoidal"],
+    specs: ["SUPERFICIE: 24 M2","AMBIENTES: 1", "PROGRAMA: LOFT - COCINA - 1 BAÑO" ],
 
     aboutTitle: "Sobre esta tipología",
 
@@ -32,7 +31,7 @@ export const PRODUCTS = [
       "",
 
     technical: [
-      { label: "Superficie", value: "27 m²" },
+      { label: "Superficie", value: "24 m²" },
     ],
 
     video: null,
@@ -41,11 +40,12 @@ export const PRODUCTS = [
   {
     id: "terra",
     name: "TERRA",
-    subtitle: "21 m²",
-    m2: 21,
-    bathroom: true,
-    rooms: 1,
-    delivery: "Entrega inmediata",
+    linePrices: {
+    "Start": "USD $ 18.900 (+ IVA)",
+    "Essential": "USD $ 25.200 (+ IVA)",
+    "Select": "USD $ 27.825 (+ IVA)",
+    "Signature": "USD $ 40.425 (+ IVA)",
+    },
     images: [
       "/images/tipologias/terra/portada.png",
       "/images/tipologias/terra/exterior-1.png",
@@ -60,7 +60,7 @@ export const PRODUCTS = [
 
     plan: "/images/tipologias/terra/plano.png",
 
-    specs: ["Estructura base metalica", "Aislamiento de poliuretano expandido","Aberturas de aluminio D.V.H","Mobiliario de cocina en melamina (colores a eleccion)" ,"Mesada de granito","Griferias Piazza","Artefactos sanitarios Piazza","Doble piso en OSB 18mm", "Doble emplacado en paredes","Pisos PVC/SPC: Piso flotante/vinílico simil madera", "Cielorraso de PVC/Placas de Yeso"],
+    specs: ["SUPERFICIE: 21 M2","AMBIENTES: 1","PROGRAMA: LOFT - KITCHENETTE - 1 BAÑO"],
 
     aboutTitle: "Sobre esta tipología",
 
@@ -77,12 +77,12 @@ export const PRODUCTS = [
   {
     id: "galo",
     name: "GALO",
-    subtitle: "28.80 m²",
-    m2: 28.8,
-    bathroom: true,
-    rooms: 2,
-    delivery: "Entrega inmediata",
-
+    linePrices: {
+    "Start": "USD $ 21.600 (+ IVA)",
+    "Essential": "USD $ 31.680 (+ IVA)",
+    "Select": "USD $ 35.280 (+ IVA)",
+    "Signature": "USD $ 53.280 (+ IVA)",
+    },
     images: [
       "/images/tipologias/galo/portada.png",
       "/images/tipologias/galo/exterior-1.png",
@@ -96,7 +96,7 @@ export const PRODUCTS = [
 
     plan: "/images/tipologias/galo/plano.png",
 
-    specs: [],
+    specs: ["SUPERFICIE: 28.80 M2","AMBIENTES: 2","PROGRAMA: ESTAR - COCINA - DORMITORIO - 1 BAÑO"],
 
     aboutTitle: "Sobre esta tipología",
 
@@ -113,12 +113,12 @@ export const PRODUCTS = [
   {
     id: "nortland",
     name: "NORTLAND",
-    subtitle: "32.20 m²",
-    m2: 32.2,
-    bathroom: true,
-    rooms: 3,
-    delivery: "Entrega inmediata",
-
+    linePrices: {
+    "Start": "USD $ 23.345 (+ IVA)",
+    "Essential": "USD $ 34.615 (+ IVA)",
+    "Select": "USD $ 38.640 (+ IVA)",
+    "Signature": "USD $ 58.765 (+ IVA)",
+    },
     images: [
       "/images/tipologias/nortland/portada.png",
       "/images/tipologias/nortland/exterior-1.png",
@@ -132,7 +132,7 @@ export const PRODUCTS = [
 
     plan: "/images/tipologias/nortland/plano.png",
 
-    specs: [],
+    specs: ["SUPERFICIE: 32.20 M2","AMBIENTES: 2","PROGRAMA: ESTAR - COCINA - DORMITORIO - 1 BAÑO"],
 
     aboutTitle: "Sobre esta tipología",
 
@@ -149,12 +149,12 @@ export const PRODUCTS = [
   {
     id: "pampa",
     name: "PAMPA",
-    subtitle: "41.80 m²",
-    m2: 41.8,
-    bathroom: true,
-    rooms: 2,
-    delivery: "Entrega inmediata",
-
+    linePrices: {
+    "Start": "USD $ 27.170 (+ IVA)",
+    "Essential": "USD $ 41.800 (+ IVA)",
+    "Select": "USD $ 47.025 (+ IVA)",
+    "Signature": "USD $ 73.150 (+ IVA)",
+    },
     images: [
       "/images/tipologias/pampa/portada.png",
       "/images/tipologias/pampa/exterior-1.png",
@@ -168,7 +168,7 @@ export const PRODUCTS = [
 
     plan: "/images/tipologias/pampa/plano.png",
 
-    specs: [],
+    specs: ["SUPERFICIE: 41.80 M2","AMBIENTES: 3","PROGRAMA: ESTAR - COCINA - DORMITORIO - 1 BAÑO"],
 
     aboutTitle: "Sobre esta tipología",
 
@@ -185,13 +185,12 @@ export const PRODUCTS = [
   {
     id: "moka",
     name: "MOKA",
-    subtitle: "43.20 m²",
-    m2: 43.2,
-    bathroom: true,
-    rooms: 3,
-    delivery: "Entrega inmediata",
-
-
+    linePrices: {
+    "Start": "USD $ 27.000 (+ IVA)",
+    "Essential": "USD $ 42.120 (+ IVA)",
+    "Select": "USD $ 47.520 (+ IVA)",
+    "Signature": "USD $ 74.520 (+ IVA)",
+    },
     images: [
       "/images/tipologias/moka/portada.png",
       "/images/tipologias/moka/exterior-1.png",
@@ -205,7 +204,7 @@ export const PRODUCTS = [
 
     plan: "/images/tipologias/moka/plano.png",
 
-    specs: [],
+    specs: ["SUPERFICIE: 43.20 M2","AMBIENTES: 3","PROGRAMA: ESTAR - COCINA - DORMITORIO - 1 BAÑO"],
 
     aboutTitle: "Sobre esta tipología",
 

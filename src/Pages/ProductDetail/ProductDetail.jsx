@@ -192,13 +192,6 @@ export default function ProductDetail() {
             <h1 className="pd__title">{product.name}</h1>
             <p className="pd__subtitle">{product.subtitle}</p>
 
-            <div className="pd__chips">
-              <span>{product.m2} m²</span>
-              <span>Ambientes: {product.rooms}</span>
-              <span>{product.bathroom ? "Con baño" : "Sin baño"}</span>
-              <span>{product.delivery}</span>
-            </div>
-
             <h3>Características</h3>
             <ul className="pd__list">
               {product.specs.map((s) => (
@@ -263,6 +256,7 @@ export default function ProductDetail() {
           <div className="pd__linesGrid">
             {LINES.map((line) => {
               const isSelected = selectedLine === line.id;
+              const price = product.linePrices?.[line.id];
 
               return (
                 <article
@@ -299,6 +293,13 @@ export default function ProductDetail() {
                       {line.subtitle}
                     </p>
 
+                    {price && (
+                      <div className="pd__linePrice">
+                        <span>Precio</span>
+                        <strong>{price}</strong>
+                      </div>
+                    )}
+                                        
                     <div className="pd__lineActions">
                       <button
                         type="button"

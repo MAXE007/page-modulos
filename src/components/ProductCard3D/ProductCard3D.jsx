@@ -24,13 +24,6 @@ export default function ProductCard3D({ product }) {
           )}
         </CardItem>
 
-        <CardItem translateZ={55} className="pc__meta">
-          <span>{product.m2} m²</span>
-          <span>Ambientes: {product.rooms}</span>
-          <span>{product.bathroom ? "Con baño" : "Sin baño"}</span>
-          <span className="pc__badge">{product.delivery}</span>
-        </CardItem>
-
         <div className="pc__actions">
           <CardItem translateZ={45} as={Link} to={`/tipologias/${product.id}`} className="pc__more">
             Ver más

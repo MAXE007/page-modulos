@@ -50,22 +50,6 @@
 }
 
 .pd__title { margin: 0 0 6px; font-size: 34px; }
-.pd__subtitle { margin: 0 0 14px; color: #555; }
-
-.pd__chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 16px;
-  color: #444;
-  font-size: 13px;
-}
-
-.pd__chips span {
-  border: 1px solid #ddd;
-  border-radius: 999px;
-  padding: 8px 10px;
-}
 
 .pd__list { margin: 0; padding-left: 18px; line-height: 1.7; }
 
@@ -588,6 +572,28 @@
 }
 
 .pd__lineDetails:hover {
+  color: #fff;
+}
+
+.pd__linePrice {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pd__linePrice span {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.pd__linePrice strong {
+  font-size: 21px;
+  line-height: 1.2;
   color: #fff;
 }
 
