@@ -467,14 +467,17 @@
   position: relative;
   height: 210px;
   overflow: hidden;
-  background: #171717;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
 }
 
 .pd__lineImage {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform 300ms ease;
 }
 
