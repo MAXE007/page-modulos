@@ -19,6 +19,11 @@ export const PRODUCTS = [
       "/images/tipologias/natura/interior-4.png",
       "/images/tipologias/natura/interior-5.png",
       "/images/tipologias/natura/interior-6.png",
+      "/images/tipologias/natura/interior-7.png",
+      "/images/tipologias/natura/interior-8.png",
+      "/images/tipologias/natura/interior-9.png",
+      "/images/tipologias/natura/interior-10.png",
+
     ],
 
     plan: "/images/tipologias/natura/plano.png",
@@ -91,7 +96,11 @@ export const PRODUCTS = [
       "/images/tipologias/galo/interior-1.png",
       "/images/tipologias/galo/interior-2.png",
       "/images/tipologias/galo/interior-3.png",
-
+      "/images/tipologias/galo/interior-4.png",
+      "/images/tipologias/galo/interior-5.png",
+      "/images/tipologias/galo/interior-6.png",
+      "/images/tipologias/galo/interior-7.png",
+      "/images/tipologias/galo/interior-8.png",
     ],
 
     plan: "/images/tipologias/galo/plano.png",

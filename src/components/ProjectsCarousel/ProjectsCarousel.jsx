@@ -3,16 +3,34 @@ import "./ProjectsCarousel.css";
 
 const PROJECTS = [
   {
-    title: "Gente",
     image: "/images/proyecto1.jpeg",
   },
   {
-    title: "Veterinaria",
-    image: "/images/proyecto2.jpeg",
+    image: "/images/proyecto2.jpg",
   },
   {
-    title: "Inauguración",
     image: "/images/proyecto3.jpeg",
+  },
+  {
+    image: "/images/proyecto4.jpeg",
+  },
+  {
+    image: "/images/proyecto5.jpeg",
+  },
+  {
+    image: "/images/proyecto6.jpg",
+  },
+  {
+    image: "/images/proyecto7.jpeg",
+  },
+  {
+    image: "/images/proyecto8.jpeg",
+  },
+  {
+    image: "/images/proyecto9.jpg",
+  },
+  {
+    image: "/images/proyecto10.jpeg",
   },
 ];
 
