@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { PRODUCTS } from "../../data/products";
+import { LINES } from "../../data/lines";
 import "./ProductDetail.css";
 import ProductPlan from "../../components/ProductPlan/ProductPlan";
 
@@ -13,13 +14,15 @@ export default function ProductDetail() {
   const [activeImage, setActiveImage] = useState(() => product?.images?.[0] ?? null);
   const [isFading, setIsFading] = useState(false);
   const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [selectedLine, setSelectedLine] = useState(null);
 
   // ✅ si cambia el id/producto, resetear imagen activa
   useEffect(() => {
     setActiveImage(product?.images?.[0] ?? null);
     setIsFading(false);
     setLightboxOpen(false);
-  }, [id]); // suficiente para tu caso
+    setSelectedLine(null);
+  }, [id]);
 
   const images = product?.images ?? [];
 
@@ -207,7 +210,11 @@ export default function ProductDetail() {
               <a
                 className="pd__cta"
                 href={`https://wa.me/5492610000000?text=${encodeURIComponent(
-                  `Hola! Quiero cotizar el ${product.name}`
+                  `Hola! Quiero cotizar el ${product.name}${
+                    selectedLine
+                      ? ` de la línea ${LINES.find((line) => line.id === selectedLine)?.name}`
+                      : ""
+                  }`
                 )}`}
                 target="_blank"
                 rel="noreferrer"
@@ -239,6 +246,86 @@ export default function ProductDetail() {
           ) : null}
         </section>
         
+        <section className="pd__lines">
+          <div className="pd__linesHeader">
+            <span className="pd__linesEyebrow">PERSONALIZÁ TU MÓDULO</span>
+
+            <h2 className="pd__linesTitle">
+              Elegí la línea de tu módulo
+            </h2>
+
+            <p className="pd__linesSubtitle">
+              Seleccioná los materiales, terminaciones y estilo que mejor se adapten
+              a tu proyecto.
+            </p>
+          </div>
+
+          <div className="pd__linesGrid">
+            {LINES.map((line) => {
+              const isSelected = selectedLine === line.id;
+
+              return (
+                <article
+                  key={line.id}
+                  className={`pd__lineCard ${
+                    isSelected ? "is-selected" : ""
+                  }`}
+                >
+                  <div className="pd__lineImageWrap">
+                    {line.image ? (
+                      <img
+                        src={line.image}
+                        alt={`Línea ${line.name}`}
+                        className="pd__lineImage"
+                        loading="lazy"
+                      />
+                    ) : (
+                      <div className="pd__lineImageFallback" />
+                    )}
+
+                    {isSelected && (
+                      <div className="pd__lineSelected">
+                        ✓ Seleccionada
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="pd__lineContent">
+                    <span className="pd__lineLabel">LÍNEA</span>
+
+                    <h3>{line.name}</h3>
+
+                    <p className="pd__lineSubtitle">
+                      {line.subtitle}
+                    </p>
+
+                    <div className="pd__lineActions">
+                      <button
+                        type="button"
+                        className={`pd__lineSelect ${
+                          isSelected ? "is-selected" : ""
+                        }`}
+                        onClick={() =>
+                          setSelectedLine(isSelected ? null : line.id)
+                        }
+                      >
+                        {isSelected ? "Línea seleccionada" : "Seleccionar línea"}
+                      </button>
+
+                      <Link
+                        to={`/lineas/${line.id}`}
+                        className="pd__lineDetails"
+                      >
+                        Ver detalles →
+                      </Link>
+                    </div>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+        </section>
+
         <ProductPlan
           plan={product.plan}
           video={product.video}
