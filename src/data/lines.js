@@ -3,7 +3,7 @@ export const LINES = [
     id: "Start",
     name: "Start",
     subtitle: "Simple,práctica y funcional",
-    image: "/images/madera.jpg",
+    image: "/images/lineas/Start.png",
 
     description:
       "Una solución práctica y eficiente, pensada para responder a las necesidades fundamentales de cada proyecto con la calidad y funcionalidad de FAST.",
@@ -35,7 +35,7 @@ export const LINES = [
     id: "Essential",
     name: "Essential",
     subtitle: "Todo lo escencial bien resuelto",
-    image: "/images/acero.jpg",
+    image: "/images/lineas/Essential.png",
 
     description:
       "Todo lo necesario para disfrutar de un módulo funcional, confortable y bien resuelto, con una selección equilibrada de materiales y equipamiento.",
@@ -70,7 +70,7 @@ export const LINES = [
     id: "Select",
     name: "Select",
     subtitle: "Más diseño, mas confort, más personalidad",
-    image: "/images/oro.jpg",
+    image: "/images/lineas/Select.png",
 
     description:
       "Pensado para quienes buscan mayor personalización sin resignar practicidad. Materiales seleccionados y detalles de diseño que suman confort y carácter a cada proyecto.",
@@ -106,7 +106,7 @@ export const LINES = [
     id: "Signature",
     name: "Signature",
     subtitle: "El máximo nivel de diseño y terminación",
-    image: "/images/diamante.jpg",
+    image: "/images/lineas/Signature.png",
 
     description:
       "La máxima expresión de FAST. Diseño, materiales y terminaciones cuidadosamente seleccionadas para lograr módulos únicos, con identidad y personalidad propia.",

@@ -7,6 +7,7 @@ import ProductPlan from "../../components/ProductPlan/ProductPlan";
 
 
 export default function ProductDetail() {
+  const waPhone = import.meta.env.VITE_CONTACT_WA_PHONE;
   const { id } = useParams();
   const product = PRODUCTS.find((p) => p.id === id);
 
@@ -202,7 +203,7 @@ export default function ProductDetail() {
             <div className="pd__ctaRow">
               <a
                 className="pd__cta"
-                href={`https://wa.me/5492610000000?text=${encodeURIComponent(
+                href={`https://wa.me/${waPhone}?text=${encodeURIComponent(
                   `Hola! Quiero cotizar el ${product.name}${
                     selectedLine
                       ? ` de la línea ${LINES.find((line) => line.id === selectedLine)?.name}`

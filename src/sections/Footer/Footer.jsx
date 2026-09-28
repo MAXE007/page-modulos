@@ -78,7 +78,39 @@ export default function Footer() {
                   </svg>
                 </span>
                 <div>
-                  <span className="footer__value">+54 2604222639</span>
+                  <span className="footer__value">+54 2604222639 (Axel)</span>
+                </div>
+              </div>
+              <div className="footer__item">
+                <span className="footer__icon">
+                  {/* PHONE */}
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M4 4c0 9 7 16 16 16l2-2-5-5-3 3c-3-1-6-4-7-7l3-3-5-5-2 3z"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.6"
+                    />
+                  </svg>
+                </span>
+                <div>
+                  <span className="footer__value">+54 2604647617 (Lucas)</span>
+                </div>
+              </div>
+              <div className="footer__item">
+                <span className="footer__icon">
+                  {/* PHONE */}
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M4 4c0 9 7 16 16 16l2-2-5-5-3 3c-3-1-6-4-7-7l3-3-5-5-2 3z"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.6"
+                    />
+                  </svg>
+                </span>
+                <div>
+                  <span className="footer__value">+54 2604483008 (Martín)</span>
                 </div>
               </div>
 
@@ -91,7 +123,7 @@ export default function Footer() {
                   </svg>
                 </span>
                 <div>
-                  <span className="footer__value">Lun a Vie · 9:00 a 18:00</span>
+                  <span className="footer__value">Lun a Sáb · 9:00 a 20:00</span>
                 </div>
               </div>
 
@@ -109,7 +141,7 @@ export default function Footer() {
                   </svg>
                 </span>
                 <div>
-                  <span className="footer__value">San Rafael, Mendoza, Argentina</span>
+                  <span className="footer__value">Hipólito Yrigoyen 4071, San Rafael, Mendoza, Argentina</span>
                 </div>
               </div>
             </div>
