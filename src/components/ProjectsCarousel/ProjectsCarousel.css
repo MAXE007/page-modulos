@@ -78,12 +78,11 @@
   transition: background 200ms ease, transform 200ms ease;
   
 }
-
-.carousel__controls button:hover {
+@media (hover: hover){
+  .carousel__controls button:hover {
   background: rgba(94, 50, 189, 0.521);
-
   transform: translateY(-2px);
-
+  }
 }
 
 /* MOBILE */
