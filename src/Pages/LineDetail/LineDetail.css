@@ -198,8 +198,9 @@
 .line-detail__ctaButton {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  background: #b998ff;
+  gap: 8px;
+  background: #f8f7fa;
+  border: 1px solid #b998ff;
   color: #0b0b0c;
   padding: 12px 26px;
   border-radius: 999px;

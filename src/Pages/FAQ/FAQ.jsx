@@ -81,6 +81,14 @@ export default function FAQ() {
             </p>
           </header>
 
+          <section className="faqSystem">
+            <img
+              src="/images/sistema.png"
+              alt="Sistema constructivo FAST: capas y materiales del módulo"
+              className="faqSystem__image"
+            />
+          </section>
+
           <div className="faqGlass">
             {FAQS.map((item, i) => {
               const open = openIndex === i;

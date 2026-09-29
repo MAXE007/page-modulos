@@ -33,7 +33,7 @@ export const PRODUCTS = [
     aboutTitle: "Sobre esta tipología",
 
     aboutText:
-      "",
+      "Tipología modular diseñada para brindar un espacio moderno, funcional y confortable. Su distribución optimiza cada metro cuadrado, ofreciendo ambientes luminosos y terminaciones de calidad.",
 
     technical: [
       { label: "Superficie", value: "24 m²" },
@@ -169,6 +169,12 @@ export const PRODUCTS = [
       "/images/tipologias/pampa/exterior-1.png",
       "/images/tipologias/pampa/exterior-2.png",
       "/images/tipologias/pampa/exterior-3.png",
+      "/images/tipologias/pampa/exterior-4.png",
+      "/images/tipologias/pampa/exterior-5.png",
+      "/images/tipologias/pampa/exterior-6.png",
+      "/images/tipologias/pampa/exterior-7.png",
+      "/images/tipologias/pampa/exterior-8.png",
+      "/images/tipologias/pampa/exterior-9.png",
       "/images/tipologias/pampa/interior-1.png",
       "/images/tipologias/pampa/interior-2.png",
       "/images/tipologias/pampa/interior-3.png",
