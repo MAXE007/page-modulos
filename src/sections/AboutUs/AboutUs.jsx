@@ -40,8 +40,6 @@ export default function AboutUs() {
 
           </div>
 
-          {/* Texto */}
-
           <div className="about__text">
 
             <p>

@@ -16,7 +16,6 @@ export default function FloatingSocialButtons({
 
   const waUrl = buildWhatsAppUrl(whatsappPhone, whatsappMessage);
 
-  // Si no hay config, no renderizamos el botón correspondiente
   return (
     <div className="fsb">
       {instagramUrl ? (

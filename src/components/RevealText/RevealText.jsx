@@ -10,7 +10,6 @@ export default function RevealText({
   const slotRef = useRef(null);
   const measureRef = useRef(null);
 
-  // cambio de palabra
   useEffect(() => {
     if (words.length <= 1) return;
     const id = setInterval(() => {
@@ -19,7 +18,6 @@ export default function RevealText({
     return () => clearInterval(id);
   }, [words, interval]);
 
-  // 🔑 medir ancho de la palabra activa
   useEffect(() => {
     if (!measureRef.current || !slotRef.current) return;
 
@@ -42,7 +40,6 @@ export default function RevealText({
         </span>
       </span>
 
-      {/* elemento invisible SOLO para medir */}
       <span
         className="ltf__measure notranslate"
         ref={measureRef}

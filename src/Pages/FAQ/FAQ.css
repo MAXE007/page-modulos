@@ -1,7 +1,7 @@
 .faqPage__container {
   max-width: 920px;
   margin: 0 auto;
-  position: relative; /* por el ::before */
+  position: relative;
 }
 
 .faqPage__header {
@@ -82,7 +82,7 @@
 }
 
 .faqItem.is-open .faqItem__panel {
-  max-height: 220px; /* suficiente para textos cortos */
+  max-height: 220px;
 }
 
 .faqItem__a {

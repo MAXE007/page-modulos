@@ -10,14 +10,11 @@ export default function ProductDetail() {
   const waPhone = import.meta.env.VITE_CONTACT_WA_PHONE;
   const { id } = useParams();
   const product = PRODUCTS.find((p) => p.id === id);
-
-  // ✅ Hooks SIEMPRE arriba (sin returns antes)
   const [activeImage, setActiveImage] = useState(() => product?.images?.[0] ?? null);
   const [isFading, setIsFading] = useState(false);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [selectedLine, setSelectedLine] = useState(null);
 
-  // ✅ si cambia el id/producto, resetear imagen activa
   useEffect(() => {
     setActiveImage(product?.images?.[0] ?? null);
     setIsFading(false);
@@ -54,7 +51,6 @@ export default function ProductDetail() {
     changeImage(images[nextIndex]);
   };
 
-  // ✅ Swipe (reutilizable)
   const touchStartX = useRef(null);
   const touchStartY = useRef(null);
 
@@ -86,7 +82,6 @@ export default function ProductDetail() {
     touchStartY.current = null;
   };
 
-  // ✅ cerrar lightbox con ESC + flechas teclado
   useEffect(() => {
     if (!lightboxOpen) return;
 
@@ -101,7 +96,7 @@ export default function ProductDetail() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lightboxOpen, activeImage]);
 
-  // ✅ Recién ahora, si no existe el producto, renderizamos
+
   if (!product) {
     return (
       <main className="pd">
@@ -115,9 +110,7 @@ export default function ProductDetail() {
     <main className="pd page-bg">
       <div className="pd__container">
         <div className="pd__layout">
-          {/* GALERÍA */}
           <section className="pd__gallery">
-            {/* IMAGEN PRINCIPAL */}
             <div
               className="pd__imageWrap"
               onTouchStart={onTouchStart}
@@ -134,7 +127,6 @@ export default function ProductDetail() {
                 <div className="pd__imageFallback" />
               )}
 
-              {/* INDICADORES */}
               <div className="pd__indicators">
                 {images.map((img, index) => (
                   <button
@@ -147,7 +139,6 @@ export default function ProductDetail() {
                 ))}
               </div>
 
-              {/* FLECHAS */}
               <button
                 className="pd__arrow pd__arrow--left"
                 onClick={(e) => {
@@ -173,7 +164,6 @@ export default function ProductDetail() {
               </button>
             </div>
 
-            {/* MINIATURAS */}
             <div className="pd__thumbs">
               {images.map((img) => (
                 <button
@@ -188,7 +178,6 @@ export default function ProductDetail() {
             </div>
           </section>
 
-          {/* INFO */}
           <section className="pd__info">
             <h1 className="pd__title">{product.name}</h1>
             <p className="pd__subtitle">{product.subtitle}</p>
@@ -223,7 +212,6 @@ export default function ProductDetail() {
           </section>
         </div>
 
-        {/* DESCRIPCIÓN DETALLADA */}
         <section className="pd__about">
           <h2 className="pd__aboutTitle">{product.aboutTitle ?? "Sobre este módulo"}</h2>
           {product.aboutText && <p className="pd__aboutText">{product.aboutText}</p>}
@@ -334,9 +322,7 @@ export default function ProductDetail() {
           title={`Plano de ${product.name}`}
         />
 
-
       </div>          
-      {/* LIGHTBOX (con swipe adentro) */}
       {lightboxOpen && (
         <div
           className="pd__lightbox"

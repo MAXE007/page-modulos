@@ -7,7 +7,6 @@
   padding-top: 64px;
 }
 
-/* imagen temporal */
 .hero__bg {
   position: absolute;
   inset: 0;
@@ -17,7 +16,6 @@
   transform: scale(1.02);
 }
 
-/* overlay para legibilidad */
 .hero__overlay {
   position: absolute;
   inset: 0;
@@ -73,7 +71,7 @@
   filter: blur(6px);
 
   animation: subtitleReveal 1.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  animation-delay: 0.9s; /* aparece después del título */
+  animation-delay: 0.9s;
 }
 
 @keyframes subtitleReveal {

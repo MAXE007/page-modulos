@@ -168,7 +168,7 @@
     align-items: flex-start;
   }
   .footer__brand {
-    justify-content: center;  /* centra el bloque del logo */
+    justify-content: center;
   }
 
   .footer__desc {
@@ -177,6 +177,6 @@
   }
 
   .footer__social {
-    justify-content: center;  /* centra botones */
+    justify-content: center;
   }
 }

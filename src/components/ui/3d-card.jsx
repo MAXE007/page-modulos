@@ -62,8 +62,6 @@ export function CardBody({ className = "", children }) {
   };
 
   const onPointerDown = (e) => {
-    // ✅ Si tocaste/clickeaste sobre un elemento interactivo, NO capturamos el pointer
-    // para no romper el click del Link/Button.
     const isInteractive = !!e.target.closest(
       "a, button, input, textarea, select, label"
     );
@@ -103,10 +101,6 @@ export function CardBody({ className = "", children }) {
   );
 }
 
-/**
- * CardItem: “sale” en Z y puede usar el parallax del pointer.
- * translateZ: number (px) recomendado 10..140
- */
 export function CardItem({
   as: Tag = "div",
   translateZ = 0,

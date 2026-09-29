@@ -12,13 +12,11 @@ export default function Navbar() {
   const isHome = location.pathname === "/";
   const solid = !isHome || scrolled;
 
-  // cerrar menú mobile al navegar
   useEffect(() => {
     setOpen(false);
     setTipologiasOpen(false);
   }, [location.pathname]);
 
-  // detectar scroll
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
 
@@ -29,7 +27,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // bloquear scroll del body cuando el menú mobile está abierto
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
 
@@ -61,14 +58,11 @@ export default function Navbar() {
             />
           </NavLink>
 
-
-          {/* DESKTOP */}
           <nav
             className="nav__links"
             aria-label="Navegación principal"
           >
 
-            {/* TIPOLOGÍAS DROPDOWN */}
             <div
               className="nav__dropdown"
               onMouseEnter={() => setTipologiasOpen(true)}
@@ -133,8 +127,6 @@ export default function Navbar() {
 
             </div>
 
-
-            {/* FAQ */}
             <NavLink
               to="/faq"
               className="nav__link"
@@ -142,8 +134,6 @@ export default function Navbar() {
               Preguntas Frecuentes
             </NavLink>
 
-
-            {/* CONTACTO */}
             <NavLink
               to="/contacto"
               className="nav__link"
@@ -153,8 +143,6 @@ export default function Navbar() {
 
           </nav>
 
-
-          {/* BURGER MOBILE */}
           <button
             className="nav__burger"
             type="button"
@@ -171,8 +159,6 @@ export default function Navbar() {
 
         </div>
 
-
-        {/* MOBILE MENU */}
         <div
           className={`nav__mobile ${
             open ? "nav__mobile--open" : ""
@@ -186,8 +172,6 @@ export default function Navbar() {
             Inicio
           </NavLink>
 
-
-          {/* MOBILE TIPOLOGÍAS */}
           <div className="nav__mobileDropdown">
 
             <button
@@ -217,25 +201,20 @@ export default function Navbar() {
                   : ""
               }`}
             >
-
               <NavLink
                 to="/tipologias"
                 className="nav__mobileSubLink"
               >
                 Modelos
               </NavLink>
-
               <NavLink
                 to="/tipologias/lineas"
                 className="nav__mobileSubLink"
               >
                 Líneas
               </NavLink>
-
             </div>
-
           </div>
-
 
           <NavLink
             to="/faq"
@@ -243,21 +222,16 @@ export default function Navbar() {
           >
             Preguntas Frecuentes
           </NavLink>
-
-
           <NavLink
             to="/contacto"
             className="nav__mobileLink"
           >
             Contacto
           </NavLink>
-
         </div>
 
       </header>
 
-
-      {/* OVERLAY MOBILE */}
       {open && (
         <div
           className="nav__overlay"

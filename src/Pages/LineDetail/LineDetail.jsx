@@ -9,7 +9,6 @@ export default function LineDetail() {
 
   return (
     <main className="line-detail page-bg">
-      {/* HERO */}
       <section className="line-detail__card line-detail__hero">
         {line.image && (
           <img
@@ -28,7 +27,6 @@ export default function LineDetail() {
         </div>
       </section>
 
-      {/* DESCRIPCIÓN */}
       <section className="line-detail__card line-detail__intro">
         <div className="line-detail__introLabel">Sobre la línea</div>
 
@@ -41,7 +39,6 @@ export default function LineDetail() {
         <p>{line.description}</p>
       </section>
 
-      {/* CARACTERÍSTICAS */}
       <section className="line-detail__card line-detail__features">
         <div className="line-detail__sectionHeader">
           <span>LÍNEA {line.name.toUpperCase()}</span>
@@ -77,7 +74,6 @@ export default function LineDetail() {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="line-detail__card line-detail__cta">
         <span>LÍNEA {line.name.toUpperCase()}</span>
 

@@ -4,12 +4,10 @@
   left: 0;
   right: 0;
   z-index: 50;
-
   transition:
     background 220ms ease,
     border-color 220ms ease,
     box-shadow 220ms ease;
-
   background: transparent;
   border-bottom: 1px solid transparent;
 }
@@ -22,10 +20,6 @@
   -webkit-backdrop-filter: blur(10px);
 }
 
-/* =========================
-   INNER
-========================= */
-
 .nav__inner {
   height: 72px;
   max-width: 1200px;
@@ -33,13 +27,8 @@
   padding: 0 24px;
   display: grid;
   grid-template-columns: auto 1fr auto;
-
   align-items: center;
 }
-
-/* =========================
-   LOGO
-========================= */
 
 .nav__brand {
   display: flex;
@@ -63,10 +52,6 @@
 .nav--scrolled .nav__logo {
   filter: none;
 }
-
-/* =========================
-   DESKTOP LINKS
-========================= */
 
 .nav__links {
   justify-self: center;
@@ -110,10 +95,6 @@
   font-weight: 600;
 }
 
-/* =========================
-   DROPDOWN
-========================= */
-
 .nav__dropdown {
   position: relative;
   display: flex;
@@ -137,12 +118,9 @@
   transition: transform 220ms ease;
 }
 
-
 .nav__chevron.is-open {
   transform: rotate(180deg);
 }
-
-/* Dropdown box */
 
 .nav__dropdownMenu {
   position: absolute;
@@ -178,8 +156,6 @@
     translateY(0);
 }
 
-/* pequeño puente para evitar que el menú se cierre al mover el mouse */
-
 .nav__dropdownMenu::before {
   content: "";
   position: absolute;
@@ -188,8 +164,6 @@
   right: 0;
   height: 18px;
 }
-
-/* Items */
 
 .nav__dropdownItem {
   display: flex;
@@ -220,10 +194,6 @@
   line-height: 1.4;
 }
 
-/* =========================
-   BURGER
-========================= */
-
 .nav__burger {
   justify-self: end;
   display: none;
@@ -251,10 +221,6 @@
 .nav--scrolled .nav__burger span {
   background: rgba(15, 15, 15, 0.9);
 }
-
-/* =========================
-   MOBILE MENU
-========================= */
 
 .nav__mobile {
   display: none;
@@ -298,10 +264,6 @@
   color: rgba(15, 15, 15, 0.82);
   border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
-
-/* =========================
-   MOBILE TIPOLOGÍAS
-========================= */
 
 .nav__mobileDropdownTrigger {
   border-left: 0;
@@ -350,10 +312,6 @@
   color: #7c3aed;
 }
 
-/* =========================
-   OVERLAY
-========================= */
-
 .nav__overlay {
   position: fixed;
   inset: 0;
@@ -362,10 +320,6 @@
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
 }
-
-/* =========================
-   RESPONSIVE
-========================= */
 
 @media (max-width: 860px) {
   .nav__links {

@@ -6,7 +6,6 @@ export default function Lines() {
   return (
     <main className="lines page-bg">
       <div className="lines__inner">
-
         <header className="lines__head">
           <h1 className="lines__title">
             Líneas
@@ -59,16 +58,11 @@ export default function Lines() {
                     Ver línea
                     <span>→</span>
                   </Link>
-
                 </div>
-
               </div>
-
             </article>
           ))}
-
         </section>
-
       </div>
     </main>
   );

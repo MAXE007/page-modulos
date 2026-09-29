@@ -49,9 +49,13 @@
   background: linear-gradient(135deg, #f1f1f1, #ffffff);
 }
 
-.pd__title { margin: 0 0 6px; font-size: 34px; }
+.pd__title { 
+  margin: 0 0 6px; font-size: 34px; 
+}
 
-.pd__list { margin: 0; padding-left: 18px; line-height: 1.7; }
+.pd__list { 
+  margin: 0; padding-left: 18px; line-height: 1.7; 
+}
 
 .pd__ctaRow {
   display: flex;
@@ -109,7 +113,6 @@
   background: linear-gradient(135deg, #eee, #fff);
 }
 
-/* INDICADORES DE IMAGEN*/
 .pd__indicators {
   position: absolute;
   bottom: 14px;
@@ -126,7 +129,6 @@
   backdrop-filter: blur(8px);
 }
 
-/* dot base */
 .pd__dot {
   width: 8px;
   height: 8px;
@@ -142,42 +144,34 @@
   opacity: 0.8;
 }
 
-/* hover */
 .pd__dot:hover {
   opacity: 1;
 }
 
-/* activo → pill */
 .pd__dot.is-active {
   width: 32px;
   background: #fff;
   opacity: 1;
 }
 
-/* FLECHAS DE IMAGENES*/
-
 .pd__arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   z-index: 6;
-
   width: 42px;
   height: 42px;
   border-radius: 999px;
   border: none;
-
   background: rgba(0, 0, 0, 0.35);
   color: white;
   font-size: 26px;
   line-height: 1;
-
   cursor: pointer;
   opacity: 0;
   transition: opacity 160ms ease, transform 160ms ease, background 160ms ease;
 }
 
-/* posiciones */
 .pd__arrow--left {
   left: 14px;
 }
@@ -186,18 +180,15 @@
   right: 14px;
 }
 
-/* hover sobre la imagen → aparecen */
 .pd__imageWrap:hover .pd__arrow {
   opacity: 1;
 }
 
-/* hover individual */
 .pd__arrow:hover {
   background: rgba(0, 0, 0, 0.55);
   transform: translateY(-50%) scale(1.05);
 }
 
-/* IMAGENES MINIATURA*/
 .pd__thumbs {
   display: flex;
   gap: 10px;
@@ -237,7 +228,6 @@
   outline-offset: 2px;
 }
 
-/* INFO CARACTERÍSTICAS */
 .pd__info {
   background: rgba(12, 12, 12, 0.55);
   backdrop-filter: blur(10px);
@@ -251,26 +241,27 @@
   flex-direction: column;
 }
 
-.pd__title { color: #fff; }
-.pd__subtitle { color: rgba(255,255,255,0.70); }
+.pd__title { 
+  color: #fff; 
+}
+.pd__subtitle { 
+  color: rgba(255,255,255,0.70); 
+}
 
-/* chips: que no queden grises “feos” */
 .pd__chips span {
   border: 1px solid rgba(255,255,255,0.14);
   background: rgba(255,255,255,0.06);
   color: rgba(255,255,255,0.88);
 }
 
-/* lista */
-.pd__list li { color: rgba(255,255,255,0.88); }
+.pd__list li { 
+  color: rgba(255,255,255,0.88); 
+}
 
-
-/* Hacer que en mobile sea natural el swipe */
 .pd__imageWrap {
   touch-action: pan-y;
 }
 
-/* Lightbox */
 .pd__lightbox {
   position: fixed;
   inset: 0;
@@ -327,30 +318,29 @@
   z-index: 2;
 }
 
-.pd__lightboxNav--left { left: 10px; }
-.pd__lightboxNav--right { right: 10px; }
+.pd__lightboxNav--left { 
+  left: 10px; 
+}
+.pd__lightboxNav--right { 
+  right: 10px; 
+}
 
-/* swipe natural */
 .pd__imageWrap {
   touch-action: pan-y;
 }
 
-/* lightbox: permitir swipe también (sin “rebotes” raros) */
 .pd__lightboxInner {
   touch-action: pan-y;
 }
 
-/* Descripción detallada */
 .pd__about {
   margin-top: 18px;
   padding: 22px;
   border-radius: 18px;
-
   background: rgba(12, 12, 12, 0.55);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.12);
-
   color: rgba(255, 255, 255, 0.92);
   box-shadow: 0 18px 50px rgba(0, 0, 0, 0.30);
 }
@@ -395,10 +385,6 @@
   font-weight: 700;
   color: rgba(255,255,255,0.92);
 }
-
-/* =========================
-   LÍNEAS
-========================= */
 
 .pd__lines {
   margin-top: 24px;

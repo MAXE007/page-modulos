@@ -47,14 +47,14 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Contacto */}
+
           <div className="footer__col">
             <h4 className="footer__title">Contacto</h4>
 
             <div className="footer__contact">
               <div className="footer__item">
                 <span className="footer__icon">
-                  {/* MAIL */}
+
                   <svg viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M3 5h18v14H3z" fill="none" stroke="currentColor" strokeWidth="1.6"/>
                     <path d="M3 5l9 7 9-7" fill="none" stroke="currentColor" strokeWidth="1.6"/>
@@ -67,7 +67,7 @@ export default function Footer() {
 
               <div className="footer__item">
                 <span className="footer__icon">
-                  {/* PHONE */}
+
                   <svg viewBox="0 0 24 24" aria-hidden="true">
                     <path
                       d="M4 4c0 9 7 16 16 16l2-2-5-5-3 3c-3-1-6-4-7-7l3-3-5-5-2 3z"
@@ -83,7 +83,7 @@ export default function Footer() {
               </div>
               <div className="footer__item">
                 <span className="footer__icon">
-                  {/* PHONE */}
+
                   <svg viewBox="0 0 24 24" aria-hidden="true">
                     <path
                       d="M4 4c0 9 7 16 16 16l2-2-5-5-3 3c-3-1-6-4-7-7l3-3-5-5-2 3z"
@@ -99,7 +99,7 @@ export default function Footer() {
               </div>
               <div className="footer__item">
                 <span className="footer__icon">
-                  {/* PHONE */}
+
                   <svg viewBox="0 0 24 24" aria-hidden="true">
                     <path
                       d="M4 4c0 9 7 16 16 16l2-2-5-5-3 3c-3-1-6-4-7-7l3-3-5-5-2 3z"
@@ -116,7 +116,6 @@ export default function Footer() {
 
               <div className="footer__item">
                 <span className="footer__icon">
-                  {/* CLOCK */}
                   <svg viewBox="0 0 24 24" aria-hidden="true">
                     <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" strokeWidth="1.6"/>
                     <path d="M12 7v6l4 2" fill="none" stroke="currentColor" strokeWidth="1.6"/>

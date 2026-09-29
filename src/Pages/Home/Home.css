@@ -7,13 +7,11 @@
   margin: 0 auto;
 }
 .home__projects {
-  /* full-width como tus otras secciones */
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-
   background: #1e8a928a;
   position: relative;
-  isolation: isolate; /* corta overlays/filtros del parent */
+  isolation: isolate;
   z-index: 0;
 }

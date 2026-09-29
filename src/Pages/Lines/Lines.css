@@ -31,52 +31,28 @@
   line-height: 1.8;
 }
 
-
-/* =========================
-   GRID
-========================= */ 
-
 .lines__grid {
   display: grid;
-
   grid-template-columns: repeat(4, 1fr);
-
   gap: 28px;
 }
 
-
-/* =========================
-   CARD
-========================= */
-
 .lineCard {
   overflow: hidden;
-
   background: rgba(15, 15, 16, 0.72);
-
   border: 1px solid rgba(255,255,255,.08);
-
   border-radius: 24px;
-
   transition:
     transform .35s ease,
     border-color .35s ease,
     box-shadow .35s ease;
 }
 
-
 .lineCard:hover {
   transform: translateY(-8px);
-
   border-color: rgba(124,58,237,.55);
-
   box-shadow: 0 25px 60px rgba(0,0,0,.3);
 }
-
-
-/* =========================
-   IMAGE
-========================= */
 
 .lineCard__imageWrapper {
   position: relative;
@@ -100,23 +76,16 @@
   transform: scale(1.05);
 }
 
-
-/* =========================
-   CONTENT
-========================= */
-
 .lineCard__content {
   padding: 28px;
 }
 
 .lineCard__eyebrow {
   display: block;
-
   margin-bottom: 10px;
   color: rgb(94, 50, 189);
   font-size: .72rem;
   font-weight: 700;
-
   letter-spacing: 2px;
 }
 
@@ -128,48 +97,31 @@
 
 .lineCard__subtitle {
   margin: 0 0 18px;
-
   color: rgba(255, 255, 255, 0.836);
-
   font-size: .95rem;
 }
 
 .lineCard__description {
   margin: 0;
-
   color: rgba(255,255,255,.836);
-
   font-size: .92rem;
-
   line-height: 1.7;
 }
 
-
-/* =========================
-   FOOTER / BUTTON
-========================= */
-
 .lineCard__footer {
   margin-top: 28px;
-
   padding-top: 22px;
-
   border-top: 1px solid rgba(255,255,255,.08);
 }
 
 .lineCard__button {
   display: inline-flex;
-
   align-items: center;
   gap: 10px;
-
   color: white;
-
   font-size: .9rem;
   font-weight: 600;
-
   text-decoration: none;
-
   transition: gap .25s ease;
 }
 
@@ -182,40 +134,23 @@
   gap: 15px;
 }
 
-
-/* =========================
-   TABLET
-========================= */
-
 @media (max-width: 1000px) {
-
   .lines__grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
 }
 
-
-/* =========================
-   MOBILE
-========================= */
-
 @media (max-width: 650px) {
-
   .lines {
     padding: 120px 18px 80px;
   }
-
   .lines__head {
     margin-bottom: 50px;
   }
-
   .lines__grid {
     grid-template-columns: 1fr;
   }
-
   .lineCard__imageWrapper {
     height: 260px;
   }
-
 }
