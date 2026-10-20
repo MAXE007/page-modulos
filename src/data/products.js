@@ -232,4 +232,45 @@ export const PRODUCTS = [
 
     video: null,
   },
+
+  {
+    id: "home",
+    name: "HOME",
+    linePrices: {
+    "Start": "USD $ 32.760 (+ IVA)",
+    "Essential": "USD $ 45.360 (+ IVA)",
+    "Select": "USD $ 52.920 (+ IVA)",
+    "Signature": "USD $ 68.040 (+ IVA)",
+    },
+    images: [
+      "/images/tipologias/home/portada.png",
+      "/images/tipologias/home/exterior-1.png",
+      "/images/tipologias/home/exterior-2.png",
+      "/images/tipologias/home/exterior-3.png",
+      "/images/tipologias/home/exterior-4.png",
+      "/images/tipologias/home/exterior-5.png",
+      "/images/tipologias/home/exterior-6.png",
+      "/images/tipologias/home/exterior-7.png",
+      "/images/tipologias/home/interior-1.png",
+      "/images/tipologias/home/interior-2.png",
+      "/images/tipologias/home/interior-3.png",
+      "/images/tipologias/home/interior-4.png",
+      "/images/tipologias/home/interior-5.png",
+    ],
+
+    plan: "/images/tipologias/home/plano.png",
+
+    specs: ["SUPERFICIE: 50.40 M2","AMBIENTES: 2","PROGRAMA: ESTAR - COCINA - DORMITORIO - 1 BAÑO"],
+
+    aboutTitle: "Sobre esta tipología",
+
+    aboutText:
+      "Tipología modular diseñada para brindar un espacio moderno, funcional y confortable. Su distribución optimiza cada metro cuadrado, ofreciendo ambientes luminosos y terminaciones de calidad.",
+
+    technical: [
+      { label: "Superficie", value: "50.40 m²" },
+    ],
+
+    video: null,
+  },
 ];
