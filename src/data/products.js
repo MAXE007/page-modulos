@@ -273,4 +273,41 @@ export const PRODUCTS = [
 
     video: null,
   },
+
+  {
+    id: "life",
+    name: "LIFE",
+    linePrices: {
+    "Start": "USD $ 25.520 (+ IVA)",
+    "Essential": "USD $ 37.840 (+ IVA)",
+    "Select": "USD $ 42.240 (+ IVA)",
+    "Signature": "USD $ 64.240 (+ IVA)",
+    },
+    images: [
+      "/images/tipologias/life/portada.png",
+      "/images/tipologias/life/exterior-1.png",
+      "/images/tipologias/life/exterior-2.png",
+      "/images/tipologias/life/exterior-3.png",
+      "/images/tipologias/life/exterior-4.png",
+      "/images/tipologias/life/exterior-5.png",
+      "/images/tipologias/life/exterior-6.png",
+      "/images/tipologias/life/exterior-7.png",
+    ],
+
+    plan: "/images/tipologias/life/plano.png",
+
+    specs: ["SUPERFICIE: 32.00 M2", "SEMICUBIERTO: 6.40 M2","AMBIENTES: 2","PROGRAMA: ESTAR - COCINA - DORMITORIO - 1 BAÑO"],
+
+    aboutTitle: "Sobre esta tipología",
+
+    aboutText:
+      "Tipología modular diseñada para brindar un espacio moderno, funcional y confortable. Su distribución optimiza cada metro cuadrado, ofreciendo ambientes luminosos y terminaciones de calidad.",
+
+    technical: [
+      { label: "Superficie", value: "32.00 m²" },
+      { label: "Semicubierto", value: "6.40 m²" },
+    ],
+
+    video: null,
+  },
 ];
